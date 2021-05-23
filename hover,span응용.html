@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0;margin: 0;position: relative;}
+        .hover{ 
+            width: 300px; height: 300px; 
+/*            border: 1px solid red;*/
+            overflow: hidden;
+
+        }
+        .hover img{
+            width: 100%;
+            display: block;
+        }
+        span{
+            display: block;
+            background: white;
+            z-index: 100;
+            transition: 0.3s;
+        }
+        .lo-span1{
+            height: 90%;
+            width: 2px;
+            position: absolute;
+            top: 0;
+            right: 300px;
+/*    위에서 인가 옆에서 내려오게 했어야했는데 위치가 잘못줌*/
+        }
+        .lo-span2{
+            position: absolute;
+            width: 90%;
+            height: 2px;
+            bottom: 300px;
+            left: 0;
+        }
+        .sh-span1{
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            bottom: 300px;
+            right: 0;
+        }
+        .sh-span2{
+            position: absolute;
+            width: 2px;
+            height: 34%;
+            bottom: 0;
+            right: 300px;
+            
+        }
+        .text-box{
+            position: absolute;
+            width: 100px;
+            height: 60px;
+            bottom: 35px;
+            padding-bottom: 5px;
+            right: 40px;
+/*            border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .text-box p{color: white; font-size: 20px;}
+        .text-box .btn{width: 80px; height: 30px; background: white; display: flex; align-items: center; justify-content: center; 
+/*            border: 1px solid gold;*/
+        }
+        
+        .hover:hover .lo-span1{            
+            top: 0;
+            right: 30px;
+        }
+        .hover:hover .lo-span2{
+            bottom: 30px;
+            left: 0;
+        }
+        .hover:hover .sh-span1{
+            bottom: 100px;
+            right: 0;
+        }
+        .hover:hover .sh-span2{
+            bottom: 0;
+            right: 148px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover">
+        <img src="item.jpg">
+        <span class="lo-span lo-span1"></span>
+        <span class="lo-span lo-span2"></span>
+        <span class="sh-span sh-span1"></span>
+        <span class="sh-span sh-span2"></span>
+        <div class="text-box">
+            <p>HANSON</p>
+            <div class="btn">DECK</div>
+        </div>
+    </div>
+</body>
+</html>

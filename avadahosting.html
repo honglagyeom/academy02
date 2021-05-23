@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin:0;}
+        .title1{color: white; text-align: center;
+               font-family: 'Roboto', sans-serif; font-weight: 900;
+            letter-spacing: 2px;  font-size: 50px;}
+        .title2{font-family: 'Roboto', sans-serif; font-weight: 400;
+            font-size: 22px; color: white; text-align: center;}
+        .section1{background: #ef4f4f; padding-top: 100px; padding-bottom:120px;}
+        .section1 .contents{ 
+            width: 1200px; margin: 50px auto;
+            display: flex;
+        }
+        .section1 .item{
+            background: #30475e; 
+            margin: 0 20px; padding: 35px 20px; text-align: center;
+        }
+        .section1 .item img{}
+        .section1 .item h1{
+            font-family: 'Roboto',sans-serif;
+            font-size: 16px; color: white;
+            margin-top: 40px; margin-bottom: 20px; }
+        .section1 .item p{
+            font-family: 'Roboto', sans-serif;font-size: 14px; 
+            color:rgb(255,255,255,0.7); font-weight: 300; line-height: 25px;
+       }
+        
+        .section2 {background: #8bcdcd;  padding: 100px;}
+        .section2 .title1{padding-bottom: 20px; }
+        .section2 .title2{font-size: 25px; padding-bottom: 20px; }
+        .section2 .contents{width:1200px;  justify-content: center; display: flex; margin: 30px auto; }
+        .section2 .item{ padding: 35px 35px; background: #fbf7f0; margin:  20px 20px;
+        text-align: center; padding-top: 30px; padding-bottom: 50px;}
+        .section2 .item h1{
+            font-family: 'Roboto',sans-serif;
+            font-size: 35px; color: #393e46;
+            margin-top: 40px; margin-bottom: 20px; 
+        }
+        .section2 .item h2{
+            font-family: 'Roboto',sans-serif;
+            font-size: 50px; color: #393e46; font-weight: 400;
+            margin-top: 40px; margin-bottom: 20px; 
+        }
+        .section2 .item p{
+                        font-family: 'Roboto',sans-serif;
+            font-size: 10px; color: #393e46;
+            margin-top: 30px; margin-bottom: 20px; line-height: 23px;
+        }
+        .section2 .button {width: 200px; height: 40px; background: #ef4f4f;
+            color: white; padding-top: 20px; font-size:15px;
+             font-family: 'Roboto', sans-serif; font-weight: 700;
+        }
+        /*section3*/
+        .section3{background: #646488; padding-top: 100px; padding-bottom: 120px;}
+        .section3 *{color: white;font-family: 'Roboto', sans-serif;}
+        .section3 .contents{ /*보더값은 만들 때 참고하기위해*/
+            width: 1200px; margin:50px auto 0;
+            display: flex; justify-content: space-between;}
+        .section3 .contents .item{width: 50%; display: flex;}
+        .section3 .contents .item .icon{ width:80px;margin-right: 20px; }
+        .section3 .contents .item .icon img{width: 100%; /*부모너비의 100%*/}
+        .section3 .contents .item .text{}
+        .section3 .contents .item .text h1{font-size: 20px; font-weight: 700;}
+        .section3 .contents .item .text p{font-size: 14px; line-height:25px;
+        margin-top: 10px; font-style: italic;}
+        
+        /*상단bar*/
+.bar{font-family:'Roboto', sans-serif;background:#ef4f4f;}
+
+    .bar .contents{
+        border:1px solid blue;
+        width:1200px; margin:0 auto;height:60px;
+        display:flex; justify-content:space-between;
+}
+	.bar .box{display:flex;}
+	.bar .top .email{color:white; font-weight:400; padding-top:10px; 
+                                 font-size:15px; margin-top:10px; padding-bottom:20px; }
+	.bar .top .iconbox{margin-top:8px;}
+	.bar .top .iconbox .icon2 img{width:45px;}
+	.bar .top .iconbox .icon1 img{width:45px;}
+	.bar .top .iconbox .icon3 img{width:45px;}
+	.bar .top .iconbox .icon4 img{width:45px;}
+
+
+.header{font-family:'Roboto', sans-serif;}
+    .header .contents{
+	    border:1px solid blue;
+	    width:1200px; margin:0 auto;height:100px;
+	    display:flex; justify-content:space-between;
+    }
+	.header .bottom .left img{padding-top:15px;}
+	.header .bottom .right{display:flex;align-items:center;justify-content:center;}
+	.header .bottom .right .text{font-size:10px; padding:10px;}
+	.header .bottom .right .text1{color:red;}
+	.header .bottom .right .bnt{background:#ef4f4f; color:white; width:80px; 
+     height:30px; align-items:center; display:flex; justify-content:center;
+     margin-left:10px; font-size:10px; font-weight:900;}
+    </style>
+    
+</head>
+<body>
+<div class="bar">
+    <div class="contents top">
+        <div class="box email">Call Us Today! 1.800.555.6789 | support@your-domain.com</div>
+        <div class="box iconbox">
+            <div class="icon icon1"><img src="0104-img/icon3.png"></div>
+            <div class="icon icon2"><img src="0104-img/icon2.png"></div>
+            <div class="icon icon3"><img src="0104-img/icon1.png"></div>
+            <div class="icon icon4"><img src="0104-img/icon4.png"></div>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="contents bottom">
+        <div class="left"><img src="0104-img/logo.png"></div>
+        <div class="right">
+            <div class="text text1">HOME</div>
+            <div class="text text2">HOSTING</div>
+            <div class="text text3">SUPPORT</div>
+            <div class="text text4">ARTICLES</div>
+            <div class="text text5">COMPANY</div>
+            <div class="text text6">CONTACT</div>
+            <div class="bnt">SIGN UP!</div>
+        </div>
+    </div>
+</div>
+    <div class="section section1">
+        <h1 class="title1">Speed Up Your Site</h1>
+        <h2 class="title2">Amazing WordPress Sites That Run At Lightning Speed</h2>
+        <div class="contents">
+            <div class="item  item1">
+                <img src="0104-img/01.png" alt="이미지내용">
+                <h1>SUPPORT</h1>
+                <p>
+                Our support teams work around the clock and are always available 24/7. Just submit a ticket.
+                </p>
+            </div>
+            <div class="item  item2">
+                <img src="0104-img/02.png" alt="이미지내용">
+                <h1>SPEED</h1>
+                <p>
+                Our WordPress installs run faster and more efficient than on any other hosting platform around.
+                </p>
+            </div>
+            <div class="item  item3"><img src="0104-img/03.png" alt="이미지내용">
+                <h1>SECURITY</h1>
+                <p>
+                 Our sites are never hacked. We back everything up each and every day. It’s bullet proof goodness.
+                </p>
+            </div>
+            <div class="item  item4"><img src="0104-img/04.png" alt="이미지내용">
+                <h1>SCALABILITY</h1>
+                <p>
+                Whether your site has 10 or 1 million visitors, our hosting works for you 100% of the time.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section section2">
+        <h1 class="title1">Flexible Pricing Plans</h1>
+        <h2 class="title2">We Have Pricing Plans To Suit Every Website Need</h2>
+        <div class= "contents">
+            <div class="item item1">
+                <h1>PERSONAL</h1>
+                <img src="0104-img/05.png" alt="다운로드">
+                <h2>$29</h2>
+                <p>
+1 WordPress Install<br>
+100K Monthly Visitors<br>
+10GB Storage<br>
+2GB RAM<br>
+Includes 24/7 Support
+                </p>
+                <div class="button button1">GET STARTED!</div>
+            </div>
+            <div class="item item2">
+                <h1>ENTERPRISE</h1>
+                <img src="0104-img/06.png" alt="네트워크">
+                <h2>$89</h2>
+                <p>
+5 WordPress Install<br>
+250K Monthly Visitors<br>
+30GB Storage<br>
+4GB RAM<br>
+Includes 24/7 Support
+                </p>
+                <div class="button button2">GET STARTED!</div>
+            </div>
+            <div class="item item3">
+                <h1>BUSINESS</h1>
+                <img src="0104-img/07.png" alt="비지니스">
+                <h2>$239</h2>
+                <p>
+30 WordPress Install<br>
+500K Monthly Visitors<br>
+50GB Storage<br>
+8GB RAM<br>
+Includes 24/7 Support
+                </p>
+                <div class="button button3">GET STARTED!</div>
+            </div>
+        </div>
+    </div>
+    <div class="section section3">
+        <h1 class="title1">Our Customers Love Us</h1>
+        <h2 class="title2">Don’t Just Take Our Word For It, Read It From Them</h2>
+        <div class="contents">
+            <div class="item item1">
+                <div class="icon"><img src="0104-img/test1.png" alt="내용"></div>
+                <div class="text">
+                    <h1>RICHARD WHEELER</h1>
+                    <p>
+                        “It really saves me time and effort. Avada Hosting is exactly what our business has been lacking. I am really satisfied with my Avada Hosting. The service was excellent. I made back the purchase price in just 48 hours!”
+                    </p>
+                </div>
+            </div>
+            <div class="item item2">
+                <div class="icon"><img src="0104-img/test2.png" alt="내용"></div>
+                <div class="text">
+                    <h1>ELEANOR KELLEY</h1>
+                    <p>
+                        “It really saves me time and effort. Avada Hosting is exactly what our business has been lacking. I am really satisfied with my Avada Hosting. The service was excellent. I made back the purchase price in just 48 hours!”
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

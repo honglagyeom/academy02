@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GENESIS</title>
+    <link href="img/iccon.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        *{margin: 0; padding: 0; position: relative; list-style: none;}
+/*
+        font-family: 'Gothic A1', sans-serif; 한글
+        font-family: 'Montserrat', sans-serif; 영어 PICK
+        font-family: 'Noto Sans KR', sans-serif; 한글 PICK
+        font-family: 'Poppins', sans-serif; 영어
+*/
+        body{background: #111111;}
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            list-style: none;
+        }
+        a{text-decoration: none;}
+        
+/*        header     */
+        header{
+            border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+            font-family: 'Noto Sans KR', sans-serif;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            left: 0;
+            top: 0;
+            background: #111;
+            z-index: 100;
+            z-index: 100;
+        }
+        header .container{
+            width: calc(100% - 60px);
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+        header .container li{
+            cursor: pointer;
+        }
+        header .container a{
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .main-menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .main-menu li{
+            padding: 20px;
+            color: white;
+            transition: 0.5s;
+        }
+/*hover  메인메뉴li,sub메뉴li에 hover하면 color 갈색으로 변함 #ad7b61 */
+        header .main-menu .menu-li:hover{color:#ad7b61;} 
+        header .sub-menu .customer:hover{color:#ad7b61;} 
+        header .sub-menu a:hover{color:#ad7b61;} 
+        
+        header .sub-menu{
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        header .sub-menu li{
+            flex: auto;
+            padding: 20px;
+        }
+        header .sub-menu .customer{
+            transition: 0.5s;
+        }
+        header .sub-menu i{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        header .sub-menu a{
+            transition: 0.5s;
+        }
+        header .main-menu img{
+            width: 105px;
+            padding: 0 30px;
+        }
+        header .sub-menu .span-box{
+            width: 60px;
+            height: 70px;
+            margin: 0 auto;
+            cursor: pointer;  
+        }
+        header .sub-menu span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: calc(50% - 11px);
+            top: calc(50% - 1px);
+            transition: 0.5s;
+        }
+        header .sub-menu .span1{
+            transform: translate(0, -8px);
+        }
+        header .sub-menu .span2{
+            transform: scaleX(1);
+        }
+        header .sub-menu .span3{
+            transform: translate(0, 8px);
+        }
+        header .sub-menu .span-box .icon{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 25px;
+            left: -20px;
+            display: none;
+        }
+        @media (max-width:1000px){
+            header .main-menu>li{display: none;}
+            header .sub-menu>li{display: none;}
+            header .sub-menu .span-box .icon{display: block;}
+        }
+        
+        header .sub-box{
+            background: black;
+            color: white;
+            font-family: 'Noto Sans KR', sans-serif;
+            width: 100vw;
+            height: 300px;
+            position: fixed;
+            top: 70px;
+            display: none;
+            left: 0;
+            
+        }
+        header .sub-box .container1{
+            max-width: 1300px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            display: flex;
+            font-weight: 300;
+            font-size: 13px;
+            
+        }
+        header .sub-box .container1 .item{
+            margin-right: 200px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+           <ul class="main-menu">
+                <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <li class="menu-li">모델
+                    <div class="sub-box">
+                        <div class="container1">
+                            <div class="item item1">
+                                <h3 class="title">스페이스</h3>
+                                <p class="text">스페이스 소개</p>
+                                <p class="text">스페이스 하남</p>
+                                <p class="text">스페이스 강남</p>
+                                <p class="text">스페이스 안성</p>
+                                <p class="text">스페이스 안녕</p>
+                            </div>
+                            <div class="item item2">
+                                <h3 class="title">시승 신청</h3>
+                            </div>
+                            <div class="item item3">
+                                <h3 class="title">전시장 찾기</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-li">구매
+                    <div class="sub-box">
+                        <div class="container1">
+                            <div class="item item1">
+                                <h3 class="title">구매</h3>
+                                <p class="text">소개</p>
+                                <p class="text">하남</p>
+                                <p class="text">강남</p>
+                                <p class="text">안성</p>
+                                <p class="text">안녕</p>
+                            </div>
+                            <div class="item item2">
+                                <h3 class="title">시승 신청</h3>
+                            </div>
+                            <div class="item item3">
+                                <h3 class="title">전시장 찾기</h3>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-li">체험
+                    <div class="sub-box">
+                        <div class="container1">
+                            <div class="item item1">
+                                <h3 class="title">체험</h3>
+                                <p class="text">소개</p>
+                                <p class="text">하남</p>
+                                <p class="text">강남</p>
+                                <p class="text">안성</p>
+                                <p class="text">안녕</p>
+                            </div>
+                            <div class="item item2">
+                                <h3 class="title">시승 신청</h3>
+                            </div>
+                            <div class="item item3">
+                                <h3 class="title">전시장 찾기</h3>
+                            </div>
+                        </div>
+                    </div>
+               </li>
+             <li class="menu-li">멤버스</li>
+             <li class="menu-li">제네시스</li>
+            </ul>
+            <ul class="sub-menu">
+                <li class="menu-li customer">고객센터</li>
+                <li class="menu-li"><a href="#">마이페이지</a></li>
+                <li class="menu-li"><i class="fas fa-search"></i></li>
+                <div class="span-box">
+                    <img src="img/mypage-icon.webp" class="icon">
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                </div>
+            </ul>
+        </div>
+    </header>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(".main-menu>li").click(function(){
+        $(".sub-box").stop().slideUp(200)
+        $(this).find(".sub-box").stop().delay(200).slideToggle(200)
+    })
+</script>

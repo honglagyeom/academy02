@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative; 
+                font-family: 'Roboto', sans-serif;}
+        h1{width: 300px; text-align: center; 
+            background: white; border: 1px solid #d2d2d2;
+            z-index: 10; margin: 0px auto; line-height: 70px;
+            top: -35px; text-transform: uppercase;
+        }
+        .section{
+            width: calc(100% - 60px);
+            margin: 50px auto;
+            border: 1px solid #d2d2d2;
+        }
+        .container{display: flex; justify-content: space-evenly; padding: 50px;}
+        .item{
+            width: 300px; height: 300px; background: pink;
+            font-size: 50px; display: flex; 
+            align-items: center;justify-content: center;
+        }
+        .section1{}
+        .section1 .container{}
+        .section1 .container .item{}
+        .section1 .container .item1{
+            transform: rotate(10deg);
+            transform-origin:left bottom;/*왼쪽 하단을 기준으로 회전축변경(기본은 가운데)*/ 
+        }
+        .section1 .container .item2{
+            transform: skewX(-30deg); 
+            transform-origin: 0 100%; /*left는 0이고 bottom은 100%*/
+/*        잘라진도형모양의 사진 넣을 때 skew사용한다*/
+        }
+        .section1 .container .item3{
+            transform: scale(0.5);
+            transform-origin: 0 300px;
+        }
+        .section1 .container .item4{
+            transform: translate(10px,-100px);
+        }
+        .section2 .item1{
+            transform: rotate(45deg);
+        }
+        .section2 .item2{
+            transform: rotateX(180deg)
+        }
+        .section2 .item3{
+            transform: rotateY(85deg) /*세로축으로 회전 90도면 안보임*/
+        }
+        .section3{perspective: 1000px;}/*입체감있는 원근*/
+        .section3 .item{transform-style: preserve-3d;}
+        .section3 .item1{transform: rotateY(90deg);} 
+        .section3 .item2{transform: rotateY(90deg);} 
+        .section3 .item3{transform: rotateY(90deg);} 
+        .section3 .item4{transform: rotateY(90deg);} 
+    </style>
+</head>
+<body>
+    <section class="section section1">
+        <h1>transform</h1>
+        <div class="container">
+            <div class="item item1">회전</div> 
+            <div class="item item2">기울기</div> 
+            <div class="item item3">크기</div> 
+            <div class="item item4">이동</div> 
+        </div>
+    </section>
+    <section class="section section2">
+        <h1>transform-rotate</h1>
+        <div class="container">
+            <div class="item item1">회전(Z축회전)</div> 
+            <div class="item item2">X축 회전</div> 
+            <div class="item item3">Y축 회전</div> 
+        </div>        
+    </section>
+    <section class="section section3">
+        <h1>rotateY</h1>
+        <div class="container">
+            <div class="item item1">10</div> 
+            <div class="item item2">30</div> 
+            <div class="item item3">60</div> 
+            <div class="item item4">80</div> 
+        </div>        
+    </section>
+</body>
+</html>

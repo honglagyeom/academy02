@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        .container{ 
+            width: 100px;
+            height: 100px;
+            margin: 50px auto;
+            border: 3px solid red;
+        }
+        .container .bar{
+            display: block;
+            position: absolute;
+            height: 6px;
+            width: 70px;
+            background-color: aquamarine;
+            left: calc(50% - 35px);
+            top: calc(50% - 3px);
+/*            3개의 bar가 컨테이너 박스 중간에 위치하도록 하는데 연산이 작용됨 외워야할 부분 */
+            
+        }
+        .container .bar1{
+            transform: translate(0,-15px);
+/*            (x좌표,y좌표)*/
+        }
+        .container .bar2{
+            transform: translate(0,0);
+        }
+        .container .bar3{
+            transform: translate(0,15px);
+        }
+        .container:hover .bar1{
+            transform: rotate(45deg);
+        }
+        .container:hover .bar2{opacity: 0;}
+        .container:hover .bar3{
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+    </div>
+</body>
+</html>

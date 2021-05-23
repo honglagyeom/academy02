@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        .wrap{
+            width: 500px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrap input{
+            margin-right: 50px;
+            width: 30px;
+            height: 30px;
+            
+        }
+        .big-circle{
+            width: 100px;
+            height: 50px;
+            background-color: #e3e3e3;
+            display: inline-block;
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.33);
+           
+        }
+        .small-circle{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.33);
+            border-radius: 50%;
+         
+        }
+/*        indianred  rgba(198, 140, 140, 0.56)*/
+        .wrap #check:checked ~ label .big-circle{
+            background:rgba(198, 140, 140, 0.56);}
+        .wrap #check:checked ~ label .small-circle{
+            background: indianred;
+            left: 50px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <span class="big-circle">
+            <span class="small-circle"></span>
+            </span>
+        </label>
+    </div>
+    
+
+</body>
+</html>

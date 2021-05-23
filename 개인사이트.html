@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=EB+Garamond:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+/*            font-family: 'Merriweather', serif;*/
+			font-family: 'Hind Siliguri', sans-serif
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+		a{text-decoration: none;}
+		
+		header{
+		    color: white;
+			z-index: 1000;
+			position: fixed;
+			left: 0;
+			top:0;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 600;
+			
+			line-height: 80px;
+			text-transform: uppercase;
+/*			border: 1px solid white;*/
+			height: 100px;
+			width: 100%;
+		}
+		
+		header .title{
+			font-size: 23px;
+			padding-left: 40px;
+		}
+
+		header .menu-box{
+			display: flex;
+			padding-right: 40px;
+		}		
+		header .menu-box p{
+			font-size: 20px;
+			padding-left: 15px;
+		}
+		
+        .main {
+			font-family: 'Abril Fatface', cursive;
+			background: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        .main .page {}
+        .main .text{
+            font-size: 115px; 
+			line-height: 115px;
+            font-weight: 900;
+            position: fixed;
+            top: 50%;
+            left: 280px;
+            transform: translate(0, -50%);
+            /* 텍스트 세로로 가운데 맞추기*/
+        }
+        .main .text1{
+        }
+        .main .text2{
+ 
+        }
+        .main .text3{
+   
+        }
+        .main .page-l {}
+		.main .page-l .text a{
+			color: white;
+			transition: 0.5s;
+		}
+
+		.main .page-l .text a :hover{color: aquamarine;}
+		
+        .main .page-r {
+            position: absolute;
+            top: 20%;
+            left: 30%;
+            width: 50%;
+            height: 60%;
+/*            border: 5px solid black;*/
+/*            overflow: hidden; */
+            /*position:fixed하면 overflow:hidden이 안먹히는 경우가 있음 그땐 clippath사용하면됨 */
+            clip-path:polygon(0 0,0 0,0 100%,0 100%);
+            /*clip-path 사각형 모양으로 했는데 여러가지 모양으로 설정가능 북마크 사이트참고*/
+        }
+        .main .page-r .text{
+            z-index: 100;
+/*			mix-blend-mode: difference;*/
+/*            -webkit-text-stroke:1px  #f5ff00;*/
+        }
+		.main .page-r .text a{
+            color: black;
+		}
+        .main .page-r .img-box{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .main .page-r .img-box img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .btn-box{
+ 			border: 1px solid white;
+			padding: 30px;
+            z-index: 11;
+            position: fixed;
+			bottom: 0;
+			right: 0;
+        }
+
+        
+/*        나타나는 클라스명*/
+        .mask1{
+            animation: appear 0.5s forwards;
+        }
+/*        사라지는 클라스명*/
+        .mask2{
+            animation: disappear 0.5s forwards;
+        }
+        
+        @keyframes appear{
+            0%{clip-path:polygon(0 0,0 0,0 100%,0 100%)}
+            100%{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+        }
+        @keyframes disappear{
+            0%{clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+            100%{clip-path:polygon(100% 0, 100% 0,100% 100%, 100% 100%)
+        	}
+		}
+		
+		.indicator{
+			position: fixed;
+			left: 50px;
+			bottom: 30px;
+			width: 50px;
+			height: 30px;
+			border: 1px solid white;
+			z-index: 1000;
+			color: white;
+		}
+		.indicator .indi{
+			justify-content: center;
+			line-height: 25px;
+			font-weight: 500;
+			font-size: 20px;
+			display: flex;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+/*			border: 1px solid gold;*/
+		}  
+		.indicator .indi1,.indicator .indi2,.indicator .indi3,.indicator .indi4{display: none;}
+		.indicator .indi h1{
+			font-size: 22px;
+		}
+		.indicator .indi p{
+			font-size: 18px;
+			font-weight: 800;
+			top: 3px;
+		}
+		
+		/*        디자인팝업창*/
+        .design-popup{
+            position: fixed;
+            left: 0;
+            top:0;
+            z-index: 1000;
+            width: 100%;
+            height: 100vh;
+            display: none;
+        }
+        .design-popup .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .design-popup .content-box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+/*            background: white;*/
+            width: 1300px;
+            margin: 0 auto;
+            height: 100vh;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .design-popup .content-box .img-box{
+            position: absolute;
+            width: 600px;
+            height: 700px;
+/*            border: 1px solid gold;*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .design-popup .img-box img{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .design-popup .img-box img:nth-child(2),.design-popup .img-box img:nth-child(3),.design-popup .img-box img:nth-child(4){display:none;}
+/*
+        .design-popup .img-box img:nth-child(1){left: 0;}
+        .design-popup .img-box img:nth-child(2){left:600px;}
+        .design-popup .img-box img:nth-child(3){
+        left:1200px;
+        }
+        .design-popup .img-box img:nth-child(4){
+        left:1800px;
+        }
+*/
+        .design-popup .content-box .arrow{
+            position: absolute;
+            top: 50%;
+            height: 2px;
+            width: 100%;
+        }
+        .design-popup .content-box .arrow img{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: calc(100% - 25px);
+            cursor: pointer;
+            z-index: 100;
+            display: none;
+        }
+        .design-popup .content-box .arrow .left{
+            left: 100px;
+        }
+        .design-popup .content-box .arrow .right{
+            right: 100px;
+        }
+        .design-popup .content-box .pop-indi{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .design-popup .content-box .pop-indi .indi{
+            color: white;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 40px;
+            left: 60px;
+            width: 100px;
+            height: 50px;
+            z-index: 100;
+        }
+        .design-popup .content-box .pop-indi .indi:nth-child(2){opacity: 0;}
+        .design-popup .content-box .pop-indi .indi:nth-child(3){opacity: 0;}
+        .design-popup .content-box .pop-indi .indi:nth-child(4){opacity: 0;}
+        .design-popup .content-box .pop-indi .indi i{
+            font-size: 23px; 
+            font-weight: 100; 
+            cursor: pointer;
+        }
+        .design-popup .content-box .pop-indi .indi p{
+            font-size: 18px;
+            font-weight: 100;
+            letter-spacing: 2px;
+        }
+        .fa-angle-left{padding-right: 20px;}
+        .fa-angle-right{padding-left: 20px;}
+        .design-popup .content-box .close-btn{
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: block;
+            position: absolute;
+            bottom: 60px;
+            right: 90px;
+        }
+        .design-popup .content-box .close-btn::before, .design-popup .content-box .close-btn::after{
+            content: "";
+            display: block;
+            width: 15px;
+            height: 2px;
+            position: absolute;
+            top: calc(50% - 1px);
+            left: calc(50% - 7.5px);
+            background: white;
+        }
+        .design-popup .content-box .close-btn::before{ transform: rotate(-45deg);}
+        .design-popup .content-box .close-btn::after{transform:rotate(45deg);}
+    </style>
+</head>
+
+<body>
+    <div class="btn-box">
+    	<button class="btn left">이전</button>
+    	<button class="btn right">다음</button>
+	</div>
+    <header>
+    	<div class="title">PORTPOLIO</div>
+    	<div class="menu-box">
+    		<p>menu</p>
+    		<p>contact</p>
+    	</div>
+    </header>
+    
+    <div class="main">
+        <div class="page page-l">
+            <div class="text-box">
+            	<span class="text text1"><a href="#">EVENT BANNER</a></span>
+                <span class="text text2"><a href="#">WEB DESIGN</a></span>
+				<span class="text text3"><a href="#">PUBLISHING</a></span>
+            </div>
+        </div>
+        <div class="page page-r mask1">
+            <div class="text-box">
+				<span class="text text1"><a href="#">EVENT BANNER</a></span>
+                <span class="text text2"><a href="#">WEB DESIGN</a></span>
+				<span class="text text3"><a href="#">PUBLISHING</a></span>
+            </div>
+            <div class="img-box">
+                <a href="#"><img src="img/design1.png"></a>
+				<a href="#"><img src="img/de1.png"></a>
+				<a href="#"><img src="img/de2.png"></a>
+            </div>
+        </div>
+    </div>
+    <div class="indicator">
+		<div class="indi indi1">
+			<h1 class="p-num">1</h1>
+			<p>/5</p>
+		</div>
+		<div class="indi indi2">
+			<h1 class="p-num">2</h1>
+			<p>/5</p>
+		</div>
+		<div class="indi indi3">
+			<h1 class="p-num">3</h1>
+			<p>/5</p>
+		</div>
+		<div class="indi indi4">
+			<h1 class="p-num">4</h1>
+			<p>/5</p>
+		</div>
+		<div class="indi indi5">
+			<h1 class="p-num">5</h1>
+			<p>/5</p>
+		</div>
+	</div>
+    
+     <div class="design-popup">
+        <div class="bg"></div>
+        <div class="content-box">
+            <div class="img-box">
+                <img src="img/event11.png" class="img">
+                <img src="img/event22-(2).png" class="img">
+                <img src="img/event3.png" class="img">
+                <img src="img/event4.png" class="img">
+            </div>
+            <div class="arrow">
+                <img src="img/left.png" class="left">
+                <img src="img/right.png" class="right">
+            </div>
+            <div class="pop-indi">
+                <div class="indi">
+                    <i class="fas fa-angle-left"></i>
+                    <p>1/4</p>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="indi">
+                    <i class="fas fa-angle-left"></i>
+                    <p>2/4</p>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="indi">
+                    <i class="fas fa-angle-left"></i>
+                    <p>3/4</p>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+                <div class="indi">
+                    <i class="fas fa-angle-left"></i>
+                    <p>4/4</p>
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="close-btn"></div>
+        </div>
+    </div>
+    
+</body></html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    var active_num=0
+    $(".text,.img-box img").hide();
+    $(".page-l .text").eq(active_num).fadeIn(500)
+    $(".page-r .text").eq(active_num).fadeIn(500)
+    $(".img-box img").eq(active_num).show()
+    //전부 없애고 초기값 0값만 보이게 설정
+    //여기까지 초기값
+    
+    
+ $(".main").on("mousewheel",function(e){
+        e.preventDefault();
+        delta=e.originalEvent.wheelDelta
+        console.log(delta)
+        text_moving=$(".text").is(":animated")
+        if(delta<0 && !text_moving){
+            active_num++;
+            active_num=active_num%3
+            disappear()
+            setTimeout(appear,1000) //1초뒤에 appear함수실행
+            text_active()
+            
+
+        }else if(delta>0 && !text_moving){
+            active_num--;
+            active_num=active_num%3
+            disappear()
+            setTimeout(appear,1000)
+            text_active()
+        }
+    })
+    
+    $(".btn").click(function(){
+        text_moving=$(".text").is(":animated")
+        if(!text_moving){
+        active_num++;
+        active_num=active_num%3
+        disappear()
+        setTimeout(appear,3000) //3초뒤에 appear함수실행
+        text_active()
+        }
+    })
+  
+    
+    //반복되는 함수 (텍스트사라지고보여지는 함수)
+    function text_active(){
+        
+        $(".page-l .text").stop().animate({opacity:0,top:45+"%"},500,function(){ 
+            //여기서 function은 콜백기능
+            $(".page-l .text").hide().css({top:55+"%"})
+            $(".page-l .text").eq(active_num).stop().show().animate({opacity:1,top:50+"%"})
+        })
+        $(".page-r .text").stop().animate({opacity:0,top:45+"%"},500,function(){ 
+            $(".page-r .text").hide().css({top:55+"%"})
+            $(".page-r .text").eq(active_num).stop().show().animate({opacity:1,top:50+"%"})
+            $(".img-box img").eq(active_num).show()
+            $(".img-box img").not($(".img-box img").eq(active_num)).hide()
+        })
+        
+    }
+    
+    
+//    나타나는 함수
+    function appear(){
+        $(".page-r").attr({class:"page page-r mask1"})
+    }
+//    사라지는 함수
+    function disappear(){
+        $(".page-r").attr({class:"page page-r mask2"})
+    }
+    
+    
+    
+    
+</script>
+
+
+
+
+
+
+
+
+
+

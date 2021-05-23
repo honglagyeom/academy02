@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Stalemate&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--
+font-family: 'Montserrat', sans-serif;
+-->
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+         *{
+             margin:0; 
+             padding: 0; 
+             position:relative;
+        }
+/*        section1*/
+        .section1{
+            width: 100%;
+            height: 130px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 10;
+            background: white;
+                
+        }
+        .section1 .container1{
+            display: flex; 
+            width: ;
+            height:130px; 
+            align-items: center;
+            margin-left: 30px;
+        }
+        .section1 .container1 img{
+            width: 150px;
+            margin-left: 20px;
+        }
+        .section1 .container1 .lcon-group{
+            color: #59606d;
+            display: flex; 
+            }
+        .section1 .menu{
+            display: flex;
+            margin-left: 30px;
+            margin-top: 40px;
+        }
+        .section1 .text{
+            padding:30px;  
+            font-weight: 400; 
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+                /*가상선택자 hover*/
+        .section1 .menu .text:hover {color:#d3d3d3;}
+        
+/*
+        .container2 .lcon-logo{
+            position: absolute;left: 30px; bottom: 30px; display: none;}
+            @media (max-width:1000px){
+            .container2 .menu{display: none;}
+            .container2 .lcon-logo{display: block;}
+        }
+*/
+        .container1 .lcon-group{
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            position: absolute;right:30px; bottom: 30px;}
+        .container2 .lcon-group i{padding-left: 10px;}
+        
+/*        section2*/
+        .section2{
+            top:130px;
+            display: flex; 
+            justify-content: center;         
+            align-items: center; 
+            width: 100%; 
+            height: 629px;
+            background-image: url(img/slide1.png); 
+            background-position: center;
+            background-size: cover;
+        }
+        .section2 .container1{
+            display: flex;
+            position: absolute; 
+            left:50px; 
+            top:80px;
+        }
+        .section2 .container1 .logo{
+            padding-left: 30px; 
+        }
+        .section2 .container1 .img1{top: -2px;}
+        .section2 button{}
+        .section2 h1{
+        color: white;font-size: 150px; font-weight: 100; font-family: 'Stalemate', cursive;}
+        .section2 button{
+            position: absolute; top:480px;
+            width: 200px; height: 50px; border: none; background: white; color: #787777;font-size: 13px; margin-top: -50px; font-weight: 300;font-family: 'Montserrat', sans-serif;}
+        .section2 i{color: white; font-size: 40px;
+            position: absolute; left: 740px; bottom: 25px;}
+        
+        .section2 .arrow-group{
+            left: 0;
+            top: 50%;
+            width: 100%;
+            height:0px;
+            position: absolute;
+            border:1px solid red;
+            
+        }
+        .section2 .arrow-group .right{
+            width:40px;
+            position: absolute;
+            right:0px;
+            transform:translateY(-50%);
+                }
+        .section2 .arrow-group .left{
+            width: 40px;
+            position: absolute;
+            left:0;
+            transform:translateY(-50%);
+
+        }
+        
+        
+/*        section3*/
+        .section3{
+            top:120px;
+            margin-top: 50px;
+        }
+        .section3 h1{
+            text-align: center;
+            padding-top: 80px; 
+            padding-bottom: 50px;
+            color: #787777; 
+            font-size: 80px; 
+            font-weight: 300;
+            font-family: 'Stalemate', cursive;
+        
+        }
+        .section3 .container{
+            margin: 0 100px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 30px;
+        }
+        @media (max-width:1000px){
+            .section3 .container{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+            
+            
+        .section3 .item img{width: 100%;}
+        .section3 .item{color: #787777; text-align: center;}
+        .section3 .item h4{
+            margin-top: 10px;
+            margin-bottom: -10px;
+            font-size: 40px; font-weight: 100;
+            font-family: 'Stalemate', cursive;}
+        .section3 .item p{
+            padding-top: 5px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+        }
+/*        section4*/
+        .section4{
+            top:120px;
+            width: 100%; height:650px; 
+            background-image: url(img/slide1900-600.png);
+            background-repeat: no-repeat;
+            margin-top: 150px; 
+            margin-bottom: 100px;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .section4 .box{
+            background: white; 
+            width: 800px; 
+            height: 200px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        .section4 p{
+            font-family: 'Stalemate', cursive;
+            color: #787777;font-size: 50px;
+        }
+        .section4 .container2{position: absolute; right: 0; bottom:0;}
+        
+/*        section5*/
+        .section5{
+            top:70px;
+            margin-bottom: 50px;
+        }
+        .section5 .container{
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .section5 .container img{width: 100px;}
+        .section5 .item{
+            padding: 40px; 
+            text-align: center;
+            color: #787777;
+        }
+        .section5 .item h1{
+            font-size: 40px; font-weight: 200;
+            font-family: 'Stalemate', cursive;}
+        .section5 .item p{
+            font-size: 15px; font-weight: 200;
+            font-family: 'Montserrat', sans-serif;
+        }
+        @media (max-width:1000px){
+            .section5 .container{
+                grid-template-columns: repeat(2,1fr);
+                grid-gap:20px;
+            }
+        }
+/*        section6*/
+        .section6{
+            top:120px;
+            color:#787777; background: #f5f4f4;
+            width: 100%; height: 900px;}
+        .section6 h1{
+            font-family: 'Stalemate', cursive;
+            font-size: 83px; font-weight: 100; padding-top: 80px; padding-bottom: 20px; text-align: center;
+        }
+        .section6 .container{
+            max-width:1300px; margin: 0 auto; 
+            padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 25px;
+        }      
+        .section6 .item img{width: 100%;}
+        
+        .section6 i{font-size: 30px;}
+        .section6 .icon-group .icon1{
+            position: absolute; 
+            left: 40px; bottom: -300px;
+        }
+        .section6 .icon-group .icon2{
+            position: absolute;
+            right: 40px; bottom: -300px;
+        }
+        .section6 .container .text{display: flex; justify-content: space-between;}
+        .section6 .container h4{
+            margin-top: 10px;
+            font-size: 40px; font-weight: 100;
+            font-family: 'Stalemate', cursive;}
+        .section6 .container p{
+            font-size: 13px;
+            position: absolute; right: 0; top:30px;
+            font-family: 'Montserrat', sans-serif;}
+        
+/*     section7   */
+        .section7{
+            width: 100%;
+            top:120px;
+        }
+        .section7 .container{
+            color: #787777;
+            margin-top: 100px;
+            text-align: center;}
+        .section7 .container .box{
+            font-family: 'Stalemate', cursive;
+            margin-top: 20px; margin-bottom: 40px;
+        }
+        .section7 .box h1{font-size: 55px; font-weight: 100;}
+        .section7 .container p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px; font-weight: 300;}
+        .section7 .container i{
+            font-size: 35px; margin-top: 5px;
+        margin-bottom: 100px;}      
+        
+/*        section8*/
+        .section8{
+            background-image: url(video-box-image.jpg);
+            background-size: cover;
+            height: 500px; width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 120px;
+        }
+        .section8 img{width: 150px;}
+        
+/*        section9*/
+        .section9{
+            margin-top: 200px;
+            color: #787777;
+            text-align: center;
+        }
+        .section9 .container1{
+            margin-top: 100px;
+            margin-bottom: 120px;
+}
+        .section9 .container1 p{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-style: oblique;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .section9 .icon-group{
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        .section9 i{padding: 7px;}
+        .section9 .container2{
+            border-top: 1px solid #c5c5c5;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .section9 .container2 p{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            font-size: 13px;
+        }
+        
+    </style>
+</head>
+<body>
+<!--   section1-->
+    <div class="section1">
+           <div class="container1">
+            <img src="img/logo3.png" class="logo">
+            <div class="menu">
+                <div class="text text1">HOME</div>
+                <div class="text text2">ABOUT US</div>
+                <div class="text text3">GIFTS</div>
+                <div class="text text4">CONTACT</div>
+            </div>
+            </div>
+<!--
+            <div class="lcon-group">
+               search
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+-->
+
+<!--
+        <div class="container2">
+            <div class="lcon-logo">
+                <i class="fas fa-bars"></i>
+            </div>
+-->
+<!--
+            <div class="menu">
+                <div class="text text1">HOME</div>
+                <div class="text text2">ABOUT US</div>
+                <div class="text text3">GIFTS</div>
+                <div class="text text4">CONTACT</div>
+            </div>
+            <div class="lcon-group">
+               search
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+-->
+      </div>
+      
+<!--      section2-->
+    <div class="section2">
+       <div class="container1">
+           <div class="logo img1"><img src="slider-image-1.png"></div>
+           <div class="logo img2"><img src="slider-image-2.png"></div>
+       </div>
+       <div class="container2">
+           <h1>Warm Your Day</h1>
+       </div>    
+       <button>BUY NEW</button>
+       <div class="arrow-group">
+           <img src="img/left.png" class="left">
+           <img src="img/right.png" class="right">
+       </div>
+    </div>
+<!--    section3-->
+    <div class="section3">
+        <h1>Warm your day with a cup of love</h1>
+       <div class="container">
+         <div class="item item1"><img src="paul-img/item-1.jpg" alt=""><h4>Icecream Latte</h4><p>$8.00</p></div>
+           <div class="item item2"><img src="paul-img/item-2.png" alt=""><h4>Falt White</h4><p>$14.00</p></div>
+           <div class="item item3"><img src="paul-img/item-3.png" alt=""><h4>Chocolate Latte</h4><p>$12.50</p></div>
+           <div class="item item4"><img src="paul-img/item-4.jpg" alt=""><h4>Cinnamon Latte</h4><p>$9.50</p></div>
+           <div class="item item5"><img src="paul-img/item-5.jpg" alt=""><h4>Ice Earl Grey</h4><p>$11.00</p></div>
+           <div class="item item6"><img src="paul-img/item-6.jpg" alt=""><h4>Dominicana</h4><p>$10.00</p></div>
+           <div class="item item7"><img src="paul-img/item-77.jpg" alt=""><h4>Iced Cafe Latte</h4><p>$9.50</p></div>
+           <div class="item item8"><img src="paul-img/item-88.jpg" alt=""><h4>Ice Sesame Latte</h4><p>$12.00</p></div>
+      </div>
+    </div>
+<!--    section4-->
+    <div class="section4">
+        <div class="container1">
+           <div class="box">
+           <p>We are serving coffee from 10am till 11am</p>
+           </div>
+        </div>
+        <div class="container2">
+        <div><img src="visit-us.png"></div>
+        </div>
+    </div>
+<!--    section5-->
+    <div class="section5">
+     <div class="container">
+         <div class="item item1">
+             <img src="img/icon-1.png">
+             <h1>Caramel Syrup</h1>
+             <p>Lorem ipsum dolor sit amet, conse</p>
+             <p>ctetu adipi scing elit, sed.</p>
+         </div>
+         <div class="item item2">
+             <img src="img/icon-2.png">
+             <h1>Almond Syrup</h1>
+             <p>Lorem ipsum dolor sit amet, conse</p>
+             <p>ctetu adipi scing elit, sed.</p>
+         </div>
+         <div class="item item3">
+             <img src="img/icon-3.png">
+             <h1>Vanilla Syrup</h1>
+             <p>Lorem ipsum dolor sit amet, conse</p>
+             <p>ctetu adipi scing elit, sed.</p>
+         </div>
+         <div class="item item4">
+             <img src="img/icon-4.png">
+             <h1>Cocoa Syrup</h1>
+             <p>Lorem ipsum dolor sit amet, conse</p>
+             <p>ctetu adipi scing elit, sed.</p>
+         </div>                  
+     </div>
+ </div>
+<!--    section6-->
+    <div class="section6">
+        <h1>What do you celebrate today</h1>
+        <div class="icon-group">
+            <i class="icon1 fas fa-angle-left"></i>
+            <i class="icon2 fas fa-angle-right"></i>
+        </div>
+        <div class="container">
+            <div class="item item1">
+                <img src="400-1.png" alt="">
+                <div class="text">
+                    <h4>Pasadena</h4>
+                    <p>$18.00</p>
+                </div>
+            </div>
+            <div class="item item2">
+                <img src="400-2.png" alt="">
+                <div class="text">
+                    <h4>Le Lavandou</h4>
+                    <p>$18.00</p>
+                </div>
+            </div>
+            <div class="item item3">
+                <img src="400-3.png" alt="">
+                <div class="text">
+                    <h4>Dominicana</h4>
+                    <p>$18.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--section7-->
+    <div class="section7">
+        <div class="container">
+            <div class="logo"><img src="img/dot-icon.png"></div>
+            <div class="box">
+                <h1>When I was 14, I had a job in a cake shop. I got caught by the<br> boss, lying down eating cake, and was sacked on my first day.</h1>
+            </div>
+            <p>Noel Fielding</p>
+            <i class="fas fa-ellipsis-h"></i>
+        </div>
+    </div>
+<!--section8-->
+    <div class="section8">
+        <div class="logo"><img src="logo-5.png" alt="play"></div>
+    </div>
+<!--section9-->
+    <div class="section9">
+        <div class="container1">
+            <div class="logo"><img src="img/logo3.png" alt=""></div>
+            <p>Life is a cake and love is the icing on top of it. Without love,<br> it becomes difficult to swallow life.</p>
+            <div class="icon-group">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fas fa-camera-retro"></i>
+            </div>
+        </div>
+        <div class="container2">
+            <p>Copyright @ Qode Interactive</p>
+        </div>
+    </div>
+
+</body>
+</html>

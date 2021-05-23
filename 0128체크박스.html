@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .wrap{
+            border: 1px solid red;
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+        }
+        .wrap>input{display: none;}
+        .wrap>label{
+            background: #a881a8; 
+            width:100px; 
+            height: 100px;
+            display: inline-block;
+        }
+        .wrap #check:checked ~ label{background: #5ba080;}
+/*        ~은 동생 의미*/
+        .wrap #check:checked ~ label span{color: white;}
+        .wrap span{}
+    </style>
+</head>
+<body>
+    <h1>체크박스 응용</h1>
+    <div class="wrap">
+        <input type="checkbox" id="check">
+        <label for="check">클릭<span>스펜</span></label>
+    </div>
+</body>
+</html>

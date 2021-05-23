@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <title>GENESIS</title>
+    <link href="img/iccon.png" rel="icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        *{margin: 0; padding: 0; position: relative; list-style: none;}
+/*
+        font-family: 'Gothic A1', sans-serif; 한글
+        font-family: 'Montserrat', sans-serif; 영어 PICK
+        font-family: 'Noto Sans KR', sans-serif; 한글 PICK
+        font-family: 'Poppins', sans-serif; 영어
+*/
+        body{background: #111111;}
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            list-style: none;
+        }
+        a{text-decoration: none;}
+        
+/*        header     */
+        header{
+            font-family: 'Noto Sans KR', sans-serif;
+            position: fixed;
+            width: 100%;
+            height: 70px;
+            left: 0;
+            top: 0;
+            background: #111;
+            z-index: 100;
+        }
+        header .container{
+            width: calc(100% - 60px);
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+        }
+        header .container li{
+            cursor: pointer;
+        }
+        header .container a{
+            color: white;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .main-menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header .main-menu li{
+            padding: 20px;
+            color: white;
+            transition: 0.5s;
+        }
+/*hover  메인메뉴li,sub메뉴li에 hover하면 color 갈색으로 변함 #ad7b61 */
+        header .main-menu .menu-li:hover{color:#ad7b61;} 
+        header .sub-menu .customer:hover{color:#ad7b61;} 
+        header .sub-menu a:hover{color:#ad7b61;} 
+        
+        header .sub-menu{
+            display: flex;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+        header .sub-menu li{
+            flex: auto;
+            padding: 20px;
+        }
+        header .sub-menu .customer{
+            transition: 0.5s;
+        }
+        header .sub-menu i{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        header .sub-menu a{
+            transition: 0.5s;
+        }
+        header .main-menu img{
+            width: 105px;
+            padding: 0 30px;
+        }
+        header .sub-menu .span-box{
+            width: 60px;
+            height: 70px;
+            margin: 0 auto;
+            cursor: pointer;  
+        }
+        header .sub-menu span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: calc(50% - 11px);
+            top: calc(50% - 1px);
+            transition: 0.5s;
+        }
+        header .sub-menu .span1{
+            transform: translate(0, -8px);
+        }
+        header .sub-menu .span2{
+            transform: scaleX(1);
+        }
+        header .sub-menu .span3{
+            transform: translate(0, 8px);
+        }
+        header .sub-menu .span-box .icon{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 25px;
+            left: -20px;
+            display: none;
+        }
+        @media (max-width:1000px){
+            header .main-menu>li{display: none;}
+            header .sub-menu>li{display: none;}
+            header .sub-menu .span-box .icon{display: block;}
+        }
+  
+        /* section1*/
+        .section1 .arrow-group{
+            position: absolute;
+            width: 100%;
+            height: 0;
+            left: 0;
+            top: 50%;
+/*            border: 1px solid red;*/
+            z-index: 100;
+        }
+        .section1 .arrow1{
+            width: 65px;
+            position: absolute;
+            right:0px;
+            transform:translateY(-50%);
+        }
+        .section1 .arrow2{
+            width: 65px;
+            position: absolute;
+            left:0px;
+            transform:translateY(-50%);
+        }
+        .section1 .img{
+            padding-top: 70px;
+            width: 100%;
+            display: block;
+        }
+        .section1 .icon-box{
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 50%;
+            top: 0;
+/*            border: 1px solid red;*/
+            z-index: 100;
+        }
+        .section1 .icon-box i{
+            position: absolute;
+            bottom: 30px;
+            color: white;
+            font-weight: 100;
+        }
+        .section1 .icon-box .icon1{transform: translateX(-40px); font-size: 10px;
+        }
+        .section1 .icon-box .icon2{transform: translateX(-20px); font-size: 10px;}
+        .section1 .icon-box .icon3{transform: translateX(0); font-size: 10px;}
+        .section1 .icon-box .icon4{transform: translateX(30px);font-size: 15px;}
+        
+        .section1 .container{
+/*
+            border: 1px solid #ad7b61;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transform:translateX(4%);
+            width: calc(100% - 60px);
+            max-width: 1400px;
+            margin: 50px auto;
+            height: 83%;
+            display: flex;
+            아무거나 막적었넼ㅋㅋㅋㅋㅋㅋ 
+*/
+            
+            border: 1px solid #ad7b61;
+            box-sizing: border-box; 
+            /*너비 높이값에 border,padding포함시켜주는 css속성! padding-box도 있어*/
+            position: absolute; 
+            width: calc(100% - 120px);
+            height: calc(100% - 120px);
+            top:60px;left:60px;
+        }
+        .section1 .container .contents{
+            padding-top: 70px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            height: 80%;
+        }
+        .row1{padding-left: 50px;}
+        .row .text{
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif; 
+            font-size:  20px;
+        }
+        .row1 h1{
+            font-size: 100px;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif; 
+        }
+        .row1 .detail{
+            font-size: 18px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+        }
+        .row2{padding-left: 50px;}
+        .row2 .text{ 
+            margin-bottom: 20px;}
+        .row2 .box-group{display: flex;}
+        .row2 .box-group .box{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            cursor: pointer;
+        }
+        .row2 .box1{
+            background: white;
+            color: black;
+        }
+        .row2 .box2{
+            background: black;
+            border: 1px solid white;
+            color: white;
+        }
+/*        section2*/
+        .section2{
+            font-family: 'Montserrat', sans-serif;
+            width: 100%;
+            height:750px; /*학원에서 높이늘림*/
+            background-image: url(img/video.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+
+        }
+        .section2 .container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .section2 .video-circle{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #848282;
+            color: white;
+            font-size: 20px;
+            background: rgba(17, 17, 17, 0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .section2 .video-circle:hover {color: black; background: rgba(255, 255, 255, 0.71);}
+        
+        .section2 p{
+            position: absolute;
+            bottom: 23px;
+            color: white;
+            font-size: 13px;
+            font-weight: 300;   
+        }
+     /*section3*/
+        .section3{padding-top: 150px;}
+        .section3 .arrow-group{
+            position: absolute;
+            width: 100%;
+            height: 0;
+            left: 0;
+            top: 50%;
+/*            border: 1px solid red;*/
+            z-index: 100;
+        }
+        .section3 .arrow1{
+            width: 65px;
+            position: absolute;
+            right:20px;
+            transform:translateY(-50%);
+        }
+        .section3 .arrow2{
+            width: 65px;
+            position: absolute;
+            left:10px;
+            transform:translateY(-50%);
+        }
+        .section3 .img{
+            width: 100%;
+            display: block;
+        }
+        .section3 .icon-box{
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 50%;
+            top: 0;
+/*            border: 1px solid red;*/
+            z-index: 100;
+        }
+        .section3 .icon-box i{
+            position: absolute;
+            bottom: 50px;
+            color: white;
+            font-weight: 100;
+        }
+        .section3 .icon-box .icon1{transform: translateX(-40px); font-size: 10px;
+        }
+        .section3 .icon-box .icon2{transform: translateX(-20px); font-size: 10px;}
+        .section3 .icon-box .icon3{transform: translateX(0); font-size: 10px;}
+        .section3 .icon-box .icon4{transform: translateX(20px);font-size: 10px;}
+        .section3 .icon-box .icon5{transform: translateX(40px);font-size: 10px;}
+        .section3 .icon-box .icon6{transform: translateX(60px);font-size: 15px;}
+        
+        .section3 .replay-circle{
+            z-index: 100;
+            width: 45px;
+            height: 45px;
+            background: #111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            cursor: pointer;
+        }
+        
+/*        공통사항*/
+        .section .title{ 
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            color: white;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .section .detail-text{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 15px;
+            font-weight: 100;
+            color: white;
+        }
+        i{cursor: pointer;}
+        .arrow{cursor: pointer;}
+        a:visited{color: white;}
+        a:link{color: white;}
+        a{text-decoration: none;}
+        
+/*        section4*/
+        .section4{
+            padding-bottom: 100px;
+            padding-top: 150px;
+        }
+        .section4 .container{
+            width: 100%;
+        }
+        .section4 .text-box{text-align: center;}
+        .section4 .title{padding-bottom: 10px;}
+        .section4 .detail-text{margin-bottom:70px;}
+        .section4 .item-list{
+            display: flex;
+            align-items: center;
+            justify-content:space-around;
+            max-width:1300px;
+            margin: 0 auto;
+/*            border: 1px solid red;*/
+        }
+        .section4 .item-list .item{
+            width: 100%;
+/*            border: 1px solid gold;*/
+            margin-right: 40px;
+            color: white;
+            padding: 30px 20px;
+            background-color: #151515;
+            transition: 0.5s;
+        }
+        .section4 .item-list .item:hover {
+            box-shadow: 0 0 1px gray; background-color: rgba(29, 29, 29, 0.82);}
+        .section4 .item-list .item:hover p{color: #ad7b61;}
+        .section4 .item-list .item:hover .bnt{top: -10px; transition: 0.7s;}
+        .section4 .item-list .item4{margin-right: 0;}
+        .section4 .item-list p{
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.5s;
+        }
+        .section4 .item-list .brand{
+            font-size:  13px; color: #969696; 
+            font-weight: 400; padding-bottom: 10px;}
+        .section4 .item-list .name{
+            font-size: 20px; font-weight: 300;
+            padding-bottom: 40px; 
+        }
+        .section4 .item-list .bnt{
+            top: 0;
+            transition: 0.7s;
+            width: 250px;
+            margin: 0 auto;
+            height: 55px;
+            border: 1px solid white;
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            cursor: pointer;
+            
+        }
+        .section4 .item-list img{
+            padding-bottom: 30px;
+            width: 100%;
+            display: block;
+        }
+        .section4 .icon-box{
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: 50%;
+            top: 0;
+            z-index: 100;
+        }
+        .section4 .icon-box i{
+            position: absolute;
+            bottom:-40px;
+            color: white;
+            font-weight: 10;
+            font-size: 3px;
+            cursor: pointer;
+        }
+        .section4 .icon-box .icon1{transform: translateX(-15px); 
+        }
+        .section4 .icon-box .icon2{transform: translateX(5px); } 
+        .section4 .arrow-group{
+            position: absolute;
+            width: 100%;
+            height: 0;
+            left: 0;
+            top: 65%;
+/*            border: 1px solid red;*/
+            z-index: 100;
+        }
+        .section4 .arrow1{
+            position: absolute;
+            right:30px;
+            width: 60px;
+            transform:translateY(-50%);
+        }
+        
+/*        section5*/
+        .section5{padding-bottom:100px; padding-top: 100px;}
+        .section5 .container{}
+        .section5 .container .contents1{text-align: center; padding-bottom: 50px;}
+        .section5 .container .contents2{
+/*            border: 1px solid red;*/
+            width: 100%;
+        }
+        .section5 .container .contents2 .cont1{
+            width: 100% ;
+            height: 100vh;
+/*            border: 1px solid gold;*/
+        }
+        .section5 .container .contents2 .cont1>div{
+            position: absolute;}
+        .section5 .container .contents2 .cont1 .box1{
+            top: 0; left: 0; width: 100%; 
+        }
+        .section5 .container .contents2 .cont1 .box1 img{
+            width: 100%; display: block;
+        }
+        .section5 .container .contents2 .cont1 .box2{
+            width: 340px; position: absolute; bottom: 150px; right: 100px; 
+        }
+        .section5 .container .contents2 .cont1 .box2 h3{
+            color: #ad7b61;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            font-weight: 300;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+        .section5 .container .contents2 .cont1 .box2 p{
+            font-weight: 300; font-size: 14px;
+            padding-bottom: 30px;
+        }
+        .section5 .container .contents2 .cont1 .box2 a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            display: block;
+            
+        }
+        .section5 .container .contents2 .cont1 .box2 a:hover ~ span{ animation: span-ani 0.5s forwards;}
+        
+        .section5 .container .contents2 .cont1 .box2 span{
+            width: 70px; height: 0.5px; display: block; background: white; margin-top: 3px;
+        }
+        .section5 .container .contents2 .cont1 .box2 i{
+            font-size: 10px;
+            color: #ad7b61;
+            padding-left: 5px;
+        }
+        .section5 .cont2 .swiper-tab{
+            max-width:1300px;
+            margin: 0 auto;
+/*            border: 1px solid blue;*/
+            bottom: 90px;
+        }
+        .section5 .cont2 .swiper-tab span{
+            width: 1300px; height: 1px; display: block; background: rgba(119, 118, 118, 0.8); 
+            margin-bottom: 18px;
+        }
+        .section5 .cont2 .swiper-tab .text-box{
+            display: flex; justify-content: space-between; color: white;
+        }
+        .section5 .cont2 .text{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .section5 .cont2 .text4{margin-right: 50px;}
+        .section5 .cont2 .text1{color:#ad7b61;}
+        .section5 .cont2 .video-circle{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #848282;
+            color: white;
+            font-size: 13px;
+            font-weight: 100;
+            background: rgba(17, 17, 17, 0.86);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            cursor: pointer;
+            position: absolute; 
+            right: 30px;
+            bottom: 70px;
+        }
+        .section5 .cont2 .video-circle:hover{background: white; color: black;}
+        
+/*        section6*/
+        .section6{
+/*            border: 1px solid red;*/
+            padding-top: 100px; padding-bottom: 100px;
+        }
+        .section6 .container{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section6 .container>div{
+            width: 50%;
+            height: 430px;
+/*            border: 1px solid blue;*/
+        }
+        .section6 .container .bg-black{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .section6 .container .left{
+            background-image: url(img/space.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 30px;
+        }
+        .section6 .container .right{
+            background-image: url(img/road-trip.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .section6 .container .text-group{
+            width: 430px;
+/*            border: 1px solid green;*/
+            padding-left: 50px;
+            padding-top: 40px;;
+        }
+        .section6 .container .sub-title{
+            font-family: 'Noto Sans KR', sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 300;
+            padding-bottom: 10px;
+        }
+        .section6 .container .detail-text{
+            font-weight: 400;
+        }
+        .section6 .container a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+            display: block;
+            margin-top: 10px;
+            
+        }
+        
+        .section6 .container a:hover ~ span{
+            animation: span-ani 0.5s forwards;
+        }
+        
+        .section6 .container span{
+            width: 73px; height: 1px; 
+            display: block; background: white; margin-top: 3px;
+        }
+        .section6 .container i{
+            font-size: 10px;
+            color: #ad7b61;
+            padding-left: 5px;
+        }
+        
+/*        seciton7*/
+        .section7{padding-bottom: 150px; padding-top: 100px;}
+        .section7 .container{
+            width: 100%; height: 100vh;
+            background-image: url(img/genesis-events.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+        }
+        .section7 .container .bg-black{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(67, 67, 67, 0);
+        }
+        .section7 .container .text-group{
+            padding-left: 100px;
+        }
+        .section7 .container .text-group p{
+            font-size: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .section7 .container .text-group .btn{
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            font-family: 'Noto Sans KR', sans-serif;
+            cursor: pointer;
+            background: white;
+        }
+        .section7 .title{font-size: 40px;}
+        .section7 .container .text-group .btn a{color: black;
+        font-weight: 300; font-size: 15px;}
+        
+/*        section8*/
+        .section8{
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 120px;
+            color: white;
+        }
+        .section8 .container{width: 100%;}
+        .section8 .container .title-group{
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            text-align: center;}
+        .section8 .container .title-group .title{
+            font-size: 40px;
+            padding-bottom: 50px;
+        }
+        .section8 .container .title-group p{
+            padding-bottom: 10px;
+            font-weight: 200;
+        }
+        
+        .section8 .container .item-content{
+/*            border: 1px solid red;*/
+            display: flex;
+            width: 100%;
+            height: 600px;
+        }
+        .section8 .item{
+            margin-right: 10px; flex:1; height: 500px;
+/*            border: 1px solid gold;*/
+            overflow: hidden;
+        }
+        .section8 .item:last-child{margin-right: 0px;}
+        .section8 .item1 a,
+        .section8 .item3 a{
+            width: 100%; height: 100%; display: block;}
+        .section8 .item2 {overflow: hidden;}
+        .section8 .item2 a{overflow: hidden;width:100%; height:calc(50% - 5px); display: block;}
+        .section8 .item2 a:nth-child(2){margin-top: 10px}
+        
+        .section8 .item img{transition: 0.5s;}
+        
+        .section8 .item>a:hover .info-group{
+                display: block;    
+        }
+        .section8 .item>a:hover img{
+            transform: scale(1.2);
+        }
+        
+        .section8 .item img{
+            width: 100%; height: 100%; display: block;}
+        .section8 .item .info-group{
+            font-family: 'Montserrat', sans-serif;
+/*            border: 2px solid blue;*/
+            position: absolute; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: none;
+        }
+        .section8 .item .info-group .text-group{
+/*            border: 1px solid red;*/
+            position: absolute;
+            bottom: 43px;
+            margin: 0 auto;
+            display: flex;
+            left: 30px;
+            width: calc(100% - 60px);
+        }
+        .section8 .item .info-group .text-group i{
+            padding-right: 10px;
+            font-size: 30px;
+        }
+        .section8 .item .info-group .text-group p{
+            font-size: 13px;
+        }
+        .section8 .item .info-group .span{
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            bottom: -60px;
+            left: 65px;
+            font-size: 15px;
+        }
+        .section8 .plus-btn{
+            width: 170px;
+            border: 1px solid white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 55px;
+            padding: 0 30px;
+            font-family: 'Noto Sans KR', sans-serif;
+            top: -30px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .section8 .plus-btn p{
+            
+        }
+        .section8 .plus-btn i{font-weight: 200;}
+/*      참고할 코드       
+        .item .bg-box{
+            position:absolute;
+            left: 0; top: 0;
+            width: 100%; 
+            height: 100%;
+            background: rgba(147, 3, 99, 0.79);
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            opacity: 0; 투명한 상태=안보이는 상태
+            transition: 0.5s;
+        }
+        
+*/
+/*        section9*/
+        .section9{
+            font-family: 'Noto Sans KR', sans-serif;
+            background: white; padding-bottom: 80px; padding-top: 100px;}
+        .section9 .container{
+            max-width: 1300px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+/*            border: 1px solid red;*/
+        }
+        .section9 .main-title{
+            text-align: center;
+            padding-bottom:  35px;
+            font-size: 33px;
+            font-weight: 500;
+        }
+        .section9 .container .contents-box{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section9 .container .contents-box .cont{
+            flex:1;
+            margin-right: 30px;
+            height: 450px;
+        }
+        .section9 .container .contents-box .cont:last-child{margin-right: 0;}
+        .section9 .container .contents-box img{
+            width: 100%; 
+            display: block;
+        }
+        .section9 .container .contents-box .cont h5{
+            font-size: 17px;
+            font-weight: 500;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+        .section9 .container .contents-box .cont p{
+            font-weight: 400;
+            font-size: 15px;
+            padding-bottom: 20px;
+        }
+        .section9 .container .contents-box .cont a{
+            color: black;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        .section9 .cont a:hover ~ span{
+            animation: span-ani 0.5s forwards;
+        }
+        
+        @keyframes span-ani{
+            0%{width:0;}
+            100%{width: 73px;}
+        }
+        
+        .section9 .container .contents-box .cont i{
+            font-size: 10px;
+            color: #ad7b61;
+            padding-left: 5px;
+            top: -1px;
+        }
+        .section9 .container .contents-box .cont span{
+            display: block;
+            width: 73px;
+            background: black;
+            height: 0.5px;
+            margin-top: 2px;
+        }
+        
+/*        footer */
+/*        footer1*/
+        .footer1{}
+        .footer1 .container1{border-bottom: 1px solid rgba(175, 175, 175, 0.12);}
+        .footer1 .content-box{
+            max-width: 1300px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+/*            border: 1px solid red;*/
+        }
+        .footer1 .container1 .content-box{
+            font-family: 'Montserrat', sans-serif; height: 60px;}
+        .footer1 .container1 .content-box .icon-group{
+            display: flex;
+        }
+        .footer1 .container1 .content-box .icon-group i{
+            color: rgba(175, 175, 175, 1) ; padding-right: 30px;
+            font-weight: 500; font-size: 15px;
+        }
+        .footer1 .container1 .content-box .icon-group i:hover{
+            color: #ad7b61;
+        }
+        .footer1 .container1 .content-box .icon-group p{
+            color: white; padding-right: 20px;
+            font-size: 13px;
+        }
+        .footer1 .container1 .content-box .top-btn{color: white; font-size: 13px;  cursor: pointer;}
+        .footer1 .container1 .content-box .top-btn i{
+            color: #ad7b61; padding: 10px; font-weight: 400; font-size: 18px; top: 3px;}
+        .footer1 .container2 .content-box{height: 70px;}
+        .footer1 .container2 .content-box a{
+            font-weight: 400;
+            padding: 30px 0;
+            font-family: 'Noto Sans KR', sans-serif; 
+            font-size: 15px;
+        }
+        .footer1 .container2 .content-box span{
+            font-family: 'Montserrat', sans-serif;
+            padding: 0 5px; font-size: 13px;
+        }
+        .footer1 .container2 .content-box .icon-group{
+            color: white; font-size: 13px; font-weight: 100;
+        }
+        .footer1 .container2 .content-box .icon-group i{
+            padding-left: 23px;
+        }
+        
+/*     footer2   */
+/* footer2배경색은 모델섹션에서 itembox배경색과 동일 background-color: #151515;*/
+        .footer2{
+            font-family: 'Noto Sans KR', sans-serif; 
+            background: #151515;
+            padding-bottom: 100px;
+            padding-top: 100px;
+        }
+        .footer2 .container{
+            max-width: 1300px;
+            width: calc(100% - 60px);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            margin: 0 auto;
+        }
+        .footer2 .container .item>div{
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .footer2 .container .item>a{
+            color: rgb(190, 190, 190);
+            font-size: 12px;
+            display: block;
+            height: 40px;
+            line-height: 30px;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+        .footer2 .container .item .text1{margin-top: 10px;}
+        
+        .footer2 .container .item>a:hover{color: #ad7b61;}
+        
+/*        footer3*/
+        .footer3 .border{
+            border-bottom: 0.5px solid rgba(119, 119, 119, 0.17);
+        }
+        .footer3 .container{
+            max-width: 1300px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+        }
+        .footer3 .container1{
+            font-family: 'Noto Sans KR', sans-serif; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            
+        }
+        .footer3 .container1 .text-group a{
+            font-size: 12px;
+            color: rgb(190, 190, 190);
+            padding-right: 15px;
+            padding-left: 15px;
+            border-right: 0.5px solid rgba(119, 119, 119, 0.17);
+            transition: 0.3s;
+        }
+        .footer3 .container1 .text-group a:first-child{padding-left: 0}
+        .footer3 .container1 .text-group a:last-child{border-right: none;}
+        .footer3 .container1 .text-group .text3{color: #ad7b61;}
+        .footer3 .container1 .text-group a:hover{color:#ad7b61;}
+        .footer3 .container1 .icon-group{}
+        .footer3 .container1 .icon-group a{ 
+            color:#ad7b61;
+            padding-left: 25px;
+            font-size: 23px;
+            font-weight: 300;
+        }
+        .footer3 .container2{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            align-items: center;
+        }
+        .footer3 .container2 .text-group .top{
+            padding-bottom: 20px;
+            }
+        .footer3 .container2 .text-group a{
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 300;
+            font-size: 12px;
+            padding-right: 30px;
+            transition: 0.3s;
+        }
+        
+        .footer3 .container2 .text-group a:hover{color: #ad7b61;}
+        
+        .footer3 .container2 .text-group i{
+            padding-right: 8px; 
+            font-weight: 100; 
+            font-size: 15px; 
+        }
+        .footer3 .container2 .box-group{
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            
+        }
+        .footer3 .container2 .box-group a{
+            display: block;
+            width: 75px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            font-size: 13px;
+        }
+        .footer3 .container2 .box-group .eng{
+            background: #212121;
+        }
+        .footer3 .container2 .box-group .kor{
+            background: #ad7b61;
+        }
+        .footer3 .container3{
+            padding-bottom: 50px;
+            padding-top: 50px;
+            font-family: 'Montserrat', sans-serif;
+            color: rgb(219, 219, 219);
+            font-size: 13px;
+            text-align: center;
+            font-weight: 400;
+        }
+        .footer3 .container3 img{
+            width: 130px;
+            padding-bottom: 20px;
+        }
+        .footer3 .container3 .text1{padding-bottom: 8px;}
+        .footer3 .container3 .text2{}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+           <ul class="main-menu">
+                <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="logo"></a>
+                </div>
+                <li class="menu-li">모델</li>
+                <li class="menu-li">구매</li>
+                <li class="menu-li">체험</li>
+                <li class="menu-li">멤버스</li>
+                <li class="menu-li">제네시스</li>
+            </ul>
+            <ul class="sub-menu">
+                <li class="menu-li customer">고객센터</li>
+                <li class="menu-li"><a href="#">마이페이지</a></li>
+                <li class="menu-li"><i class="fas fa-search"></i></li>
+                <div class="span-box">
+                    <img src="img/mypage-icon.webp" class="icon">
+                    <span class="span1"></span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                </div>
+            </ul>
+        </div>
+    </header>
+<!--    section1-->
+    <section class="section section1">
+        <div class="main-silde">
+            <div class="arrow-group">
+                <img class="arrow arrow1" src="img/right.png">
+                <img class="arrow arrow2" src="img/left.png">
+            </div>
+            <div class="icon-box">
+               <i class="fas fa-circle icon1"></i>
+               <i class="fas fa-circle icon2"></i>
+               <i class="fas fa-circle icon3"></i>
+                <i class="fas fa-pause icon4"></i>
+            </div>
+            <!--        슬라이드 부분-->
+            <img class="img img2" src="img/silde2-1920-900.png" alt="silde">
+            <div class="container">
+               <div class="contents">
+                <div class="row row1">
+                    <div class="text brand-name">THE ALL-NEW GENESIS</div>
+                    <h1 class="car-name">G80</h1>
+                    <div class="detail">특별함을 아는 당신에게.</div>
+                </div>
+                <div class="row row2">
+                    <div class="text moto">YOU LIVE. YOU GROW. YOU KNOW.</div>
+                    <div class="box-group">
+                        <div class="box box1">더 알아보기</div>
+                        <div class="box box2">견적내기</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<!--section2-->
+    <section class="section section2">
+        <div class="container">
+            <div class="video-circle">▶</div>
+            <p>GV70 GLOBAL LAUNCH</p>
+        </div>
+    </section>
+<!--section3-->
+    <section class="section section3">
+        <div class="sub-slide">
+           <!--        슬라이드 부분-->
+                <img class="img img2" src="img/1.webp" alt="silde">
+                <div class="arrow-group">
+                <img class="arrow arrow1" src="img/right.png">
+                <img class="arrow arrow2" src="img/left.png">
+            </div>
+            <div class="icon-box">
+               <i class="fas fa-circle icon1"></i>
+               <i class="fas fa-circle icon2"></i>
+               <i class="fas fa-circle icon3"></i>
+               <i class="fas fa-circle icon4"></i>
+               <i class="fas fa-circle icon5"></i>
+               <i class="fas fa-pause icon6"></i>
+            </div>
+            <div class="replay-circle">
+            <i class="fas fa-share"></i>
+            </div>
+        </div>
+    </section>
+<!--section4-->
+    <section class="section section4">
+        <div class="container">
+            <div class="text-box">   
+                <h3 class="title">Our Models</h3>
+                <p class="detail-text">역동적이면서도 우아한 디자인과 최첨단 기술을 탑재한 제네시스 브랜드의 라인업을 살펴보세요.</p>
+            </div>
+            <div class="item-list">
+                <div class="item item1">
+                    <p class="brand">GENESIS</p>
+                    <p class="name">G70</p>
+                    <img src="img/our-model1.webp">
+                    <div class="bnt"><a href="#">자세히 보기</a></div>
+                </div>
+                <div class="item item2">
+                    <p class="brand">GENESIS</p>
+                    <p class="name">G80</p>
+                    <img src="img/our-model2.webp">
+                    <div class="bnt"><a href="#">자세히 보기</a></div>
+                </div>
+                <div class="item item3">
+                    <p class="brand">GENESIS</p>
+                    <p class="name">G90</p>
+                    <img src="img/our-model3.webp">
+                    <div class="bnt"><a href="#">자세히 보기</a></div>
+                </div>
+                <div class="item item4">
+                    <p class="brand">GENESIS</p>
+                    <p class="name">GV70</p>
+                    <img src="img/our-model4.webp">
+                    <div class="bnt"><a href="#">자세히 보기</a></div>
+                </div>
+            </div>
+            <div class="icon-box">
+               <i class="fas fa-circle icon1"></i>
+               <i class="fas fa-circle icon2"></i>
+            </div>
+            <div class="arrow-group">
+                <img src="img/right.png" class="arrow arrow1">
+            </div>
+        </div>
+    </section>
+    
+<!--section5-->
+    <section class="section section5">
+        <div class="container">
+           <div class="contents contents1">
+               <h3 class="title">The Creation and Discovery</h3>
+           </div>
+           <div class="contents contents2">
+                <div class="cont cont1">
+                    <div class="box box1">
+                        <img class="img img1" src="img/concept-cars.webp">
+                    </div>
+                    <div class="box box2">
+                        <h3 class="sub-title">Concept Cars</h3>
+                        <p class="detail-text">제네시스는 오감을 만족시키는 감성 디자인을 추구합니다. 완벽한 비례와 정교하고 섬세한 디테일을 통해 감성 공간이 완성됩니다.</p>
+                        <a href="#" class="detail-go">자세히보기<i class="fas fa-chevron-right"></i></a>
+                        <span></span>
+                   </div>
+               </div>
+<!--
+                   <div class="box box2">
+                        <h3 class="sub-title">2020 Red Dot Awards</h3>
+                        <p class="detail-text">독일 노르트하인 베스트팔렌 디자인센터가 주관하는 세계 3대 디자인상 중 하나인 ‘2020 레드 닷 어워드’에서 제네시스가 본상 4개 부문(Interface, Retail and Spatial Communication Design)에서 수상하며 브랜드 우수성을 알렸습니다.</p>
+                   </div>
+                   <div class="box box3">
+                        <h3 class="sub-title">2020 IIHS Top Safety Pick +</h3>
+                        <p class="detail-text">미국 고속도로 안전보험협회가 발표한 충돌 평가에서 가장 안전한 차량에 부여하는 ‘톱 세이프티 픽 플러스(Top Safety Pick+)’에 G70, G80, G90 제네시스 세단 전 차종이 최고 안전한 차로 선정되었습니다.</p>
+                        <p>*G70의 경우 2019년 12월 이후 모델에 해당됩니다.</p>
+                   </div>
+                   <div class="box box4">
+                        <h3 class="sub-title">North American Car of the Year 2019</h3>
+                        <p class="detail-text">G70가 디트로이트 모터쇼에서 '승용부문 북미 올해의 차'를 수상하였습니다.</p>
+                   </div>
+-->
+                <div class="cont cont2">
+                   <div class="taps content"></div>
+                   <div class="swiper-tab">
+                       <span></span>
+                       <div class="text-box">
+                            <p class="text text1">CONCEPT CARS</p>
+                            <p class="text text2">2020 RED DOT AWARDS</p>
+                            <p class="text text3">2020 LLHS TOP SAFETY PICK+</p>
+                            <p class="text text4">NORTH AMERICAN CAR OF THE YEAR 2019</p>
+                       </div>
+                    </div>
+                    <div class="video-circle"><i class="fas fa-pause"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--section6-->
+    <section class="section section6">
+        <div class="container">
+            <div class="left">
+                <div class="bg-black"></div>
+                <div class="text-group">
+                    <div class="sub-title">스페이스</div>
+                    <p class="detail-text">제네시스의 디자인과 고유한 감각을 반영한 현대적 공간으로 여러분을 초대합니다. 제네시스에 관한 다양한 체험으로 당신만의 제네시스를 찾는 여정을 지원합니다.</p>
+                    <a href="#" class="detail-go">자세히보기<i class="fas fa-chevron-right"></i></a>
+                    <span></span>
+                </div>
+            </div>
+            <div class="right">
+                <div class="bg-black"></div>
+                <div class="text-group">
+                    <div class="sub-title">로드트립</div>
+                    <p class="detail-text">제네시스와 내셔널지오그래픽 트래블러와 함께하는 서사적 여행, 제네시스 로드트립을 통해 자세한 정보를 확인하세요.</p>
+                    <a href="#" class="detail-go">자세히보기<i class="fas fa-chevron-right"></i></a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--section7-->
+    <section class="section section7">
+        <div class="container">
+            <div class="bg-black"></div>
+            <div class="text-group">
+               <h3 class="title">Genesis Events</h3>
+               <p class="detail-text">제네시스에서 진행중인 다양한 이벤트를 소개합니다.</p>
+                <div class="btn"><a href="#">이벤트 보기</a></div>
+            </div>
+        </div>
+    </section>
+    
+<!--    section8-->
+    <section class="section section8">
+        <div class="container">
+            <div class="title-group">
+                <p>Instagram</p>
+                <h3 class="title">Experience Genesis</h3>
+            </div>
+            <div class="item-content">
+               <div class="item item1">
+                    <a href="#">
+                        <img class="img img1" src="img/insta1.png">
+                        <div class="info-group">
+                                <div class="text-group">
+                                   <i class="fab fa-instagram"></i>
+                                   <p>
+                                    Take a seat in the cabin where everything’s about performance inside and out.
+                                    <br>
+                                    #GENESIS #제네시스
+                                    #GenesisG70 #제네시스G70 #G70
+                                    #ThenewGenesisG70 #제네시스더뉴G70
+                                    #G70Sport #G70스포츠
+                                    </p>
+                                </div>
+                                <span class="span">
+                                    <span>See more
+                                    <i class="fas fa-external-link-alt"></i></span>
+                                </span>
+                        </div>
+                   </a>
+                </div>
+                <div class="item item2">
+                    <a href="#">
+                        <img class="img img2" src="img/insta2.png">
+                        <div class="info-group">
+                                <div class="text-group">
+                                   <i class="fab fa-instagram"></i>
+                                   <p>
+                                    Take a seat in the cabin where everything’s about performance inside and out.
+                                    <br>
+                                    #GENESIS #제네시스
+                                    #GenesisG70 #제네시스G70 #G70
+                                    #ThenewGenesisG70 #제네시스더뉴G70
+                                    #G70Sport #G70스포츠
+                                    </p>
+                                </div>
+                                <span class="span">
+                                    <span>See more
+                                    <i class="fas fa-external-link-alt"></i></span>
+                                </span>
+                        </div>
+                       </a>
+                       <a href="#">
+                            <img class="img img3" src="img/insta3.png">
+                            <div class="info-group bottom-box">
+                                <div class="text-group">
+                                   <i class="fab fa-instagram"></i>
+                                   <p>
+                                    Take a seat in the cabin where everything’s about performance inside and out.<br>
+
+                                    #GENESIS #제네시스
+                                    #GenesisG70 #제네시스G70 #G70
+                                    #ThenewGenesisG70 #제네시스더뉴G70
+                                    #G70Sport #G70스포츠
+                                    </p>
+                                </div>
+                                <span class="span">
+                                    <span>See more
+                                    <i class="fas fa-external-link-alt"></i></span>
+                                </span>
+                           </div>
+                       </a>
+                    </div>
+                <div class="item item3">
+                        <a href="#">
+                        <img class="img img4" src="img/insta4.png">
+                        <div class="info-group">
+                                <div class="text-group">
+                                   <i class="fab fa-instagram"></i>
+                                   <p>
+                                    Take a seat in the cabin where everything’s about performance inside and out.<br>
+
+                                    #GENESIS #제네시스
+                                    #GenesisG70 #제네시스G70 #G70
+                                    #ThenewGenesisG70 #제네시스더뉴G70
+                                    #G70Sport #G70스포츠
+                                    </p>
+                                </div>
+                                <span class="span">
+                                    <span>See more
+                                    <i class="fas fa-external-link-alt"></i></span>
+                                </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="plus-btn">
+                <p>더보기</p>
+                <i class="fas fa-plus"></i>
+            </div>
+       </div>
+    </section>
+    
+<!--    section9-->
+    <section class="section section9">
+       <div class="container">
+            <h3 class="main-title">연관 컨텐츠</h3>
+            <div class="contents-box">
+                <div class="cont cont1">
+                    <img src="img/contents1.webp">
+                    <h5>이벤트</h5>
+                    <p>제네시스에서 진행중인 다양한 이벤트 정보를 전해 드립니다.</p>
+                    <a href="#" class="detail-go">자세히 보기<i class="fas fa-chevron-right"></i></a>
+                    <span></span>
+                </div>
+                <div class="cont cont2">
+                    <img src="img/contents2.jpg">
+                    <h5>디지털 서비스</h5>
+                    <p>제네시스의 디지털 서비스는 첨단 신기술로 당신과 차가 함께 하는 일상에 편리한을 한층 더해줍니다.</p>
+                    <a href="#" class="detail-go">자세히 보기<i class="fas fa-chevron-right"></i></a>
+                    <span></span>
+                </div>
+                <div class="cont cont3">
+                    <img src="img/contents3.webp">
+                    <h5>멤버스</h5>
+                    <p>제네시스 오너분들께만 주어지는 특별한 혜택과 이상적인 경험을 선사합니다.</p>
+                    <a href="#" class="detail-go">자세히 보기<i class="fas fa-chevron-right"></i></a>
+                    <span></span>
+                </div>
+            </div>    
+       </div>
+    </section>
+    
+<!--    footer  -->
+<footer>
+    <section class="footer footer1">
+        <div class="container container1">
+            <div class="content-box">
+                <div class="icon-group">
+                    <p class="text">Share</p>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="top-btn">Top<i class="fas fa-angle-up"></i></div>
+            </div>
+        </div>
+        <div class="container container2">
+            <div class="content-box">
+                <a class="text" href="#">[공지사항]<span>GENESIS CONNECTED SERVICES</span>서비스 일시 중지 안내</a>
+                <div class="icon-group">
+                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-pause"></i>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="footer footer2">
+        <div class="container">
+                <div class="item item1">
+                    <div class="title title1">모델</div>
+                    <a href="#" class="text text1">G70</a>
+                    <a href="#" class="text text2">G80</a>
+                    <a href="#" class="text text3">G90</a>
+                    <a href="#" class="text text4">GV70</a>
+                    <a href="#" class="text text5">GV80</a>
+                </div>
+                <div class="item item2">
+                    <div class="title title2">구매</div>
+                    <a href="#" class="text text1">구매 프로그램</a>
+                    <a href="#" class="text text2">제네시스 스펙트럼</a>
+                    <a href="#" class="text text3">견적내기</a>
+                    <a href="#" class="text text4">구매 상담 신청</a>
+                    <a href="#" class="text text5">사양 조회하기</a>
+                </div>
+                <div class="item item3">
+                    <div class="title title3">체험</div>
+                    <a href="#" class="text text1">스페이스</a>
+                    <a href="#" class="text text2">시승 신청</a>
+                    <a href="#" class="text text3">전시장 찾기</a>
+                </div>
+                <div class="item item4">
+                    <div class="title title4">멤버스</div>
+                    <a href="#" class="text text1">제네시스 멤버십</a>
+                    <a href="#" class="text text2">제네시스 커넥티드 서비스</a>
+                    <a href="#" class="text text3">디지털 서비스</a>
+                    <a href="#" class="text text4">차량관리 서비스</a>
+                </div>
+                <div class="item item5">
+                    <div class="title title1">제네시스</div>
+                    <a href="#" class="text text1">브랜드 소개</a>
+                    <a href="#" class="text text2">컨셉카</a>
+                    <a href="#" class="text text3">모터쇼</a>
+                    <a href="#" class="text text4">로드트립</a>
+                    <a href="#" class="text text5">제네시스X골프</a>
+                </div>
+                <div class="item item6">
+                    <div class="title title2">고객센터</div>
+                    <a href="#" class="text text1">고객센터 안내</a>
+                    <a href="#" class="text text2">공지사항</a>
+                    <a href="#" class="text text3">이벤트</a>
+                    <a href="#" class="text text4">자주 묻는 질문</a>
+                    <a href="#" class="text text5">다운로드 센터</a>
+                    <a href="#" class="text text6">PR 센터</a>
+                </div>
+                <div class="item item7">
+                    <div class="title title3">마이 페이지</div>
+                </div>
+            </div>
+    </section>
+    
+<!--    footer3-->
+    <section class="footer footer3">
+       <div class="border border1">
+        <div class="container container1">
+            <div class="text-group">
+                <a href="#" class="text text1">사이트맵</a>
+                <a href="#" class="text text2">이용약관</a>
+                <a href="#" class="text text3">개인정보 처리방침</a>
+                <a href="#" class="text text4">저작권 안내</a>
+                <a href="#" class="text text5">보증안내</a>
+                <a href="#" class="text text6">자동차 교환 및 환불 중재 규정 안내</a>
+                <a href="#" class="text text7">하자 재발 통보 안내</a>
+            </div>
+            <div class="icon-group">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        </div>
+        <div class="border border2">
+        <div class="container container2">
+            <div class="text-group">
+                <div class="text top">
+                    <a href="#"><i class="fas fa-external-link-alt"></i>제네시스 챔피언십</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i>제네시스 멤버스 몰</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i>네비게이션 업데이트</a>
+                </div>
+                <div class="text bottom">
+                    <a href="#"><i class="fas fa-external-link-alt"></i>제네시스 드라이빙 아카데미</a>
+                    <a href="#"><i class="fas fa-globe"></i>제네시스 월드와이드</a>
+                </div>
+            </div>
+            <div class="box-group">
+                <a href="#" class="eng">ENG</a>
+                <a href="#" class="kor">KOR</a>
+            </div>
+        </div>
+        </div>
+        <div class="container container3">
+            <img class="logo" src="img/footer-logo.png">
+            <p class="text1">© Copyright 2021 Hyundai Motor Company.</p>
+            <p class="text2">All Rights Reserved.</p>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

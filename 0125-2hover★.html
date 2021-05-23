@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        body{
+            background: black;
+        }
+        .container{
+            width: calc(100% - 60px);
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            border: 10px solid gold;
+            
+        }
+        .item{
+            border:  1px solid red;
+            flex: 1; /*비율의미*/
+            margin-right: 30px;
+        }
+        .item:last-child{margin-right: 0;}
+        .item img{
+            display: block;
+            width: 100%;
+        } 
+        .item .text-box{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        .item .text-box > * {
+            border: 1px solid blue;
+            width: 80%;
+            height: 30px;
+            color: white;
+            
+            
+        }
+        .item .small-t{
+           overflow: hidden;
+        }
+        .item .small-t>p{
+            position: absolute;
+            left: 0;
+            transition: 0.5s;
+/* top은 마우스커서 올렸을 때 움직여야하니까 한꺼번에 지정안해주고 밑에 개별지정해줌*/
+        }
+        .item .t1{
+            top: 0;
+        }
+        .item .t2{
+            top: 30px;
+        }
+        .item img{transition: 0.5s;}
+/*        아이템에 마우스를 올렸을 때 t1 top:30//t2 top:0;*/
+        .item:hover .t1{top:30px;}
+        .item:hover .t2{top:0;}
+        .item:hover img{filter: grayscale(1) brightness(0.3);}
+        
+        
+        
+        
+       /* item:nth-child(1){flex: 1}
+        item:nth-child(2){flex: 2}
+        item:nth-child(3){}
+        flex는 비율을 나타냄*/
+/*        img{width: 100%;}*/
+/*
+        
+        1st
+        2nd
+        3th
+        4th
+        5th
+        
+*/
+        
+    </style>
+</head>
+<body>
+<!--    2.png-->
+    <div class="container">
+        <div class="item">
+            <img src="2.png">
+            <div class="text-box">
+                <div class="small-t">
+                    <p class="t1">마우스 올리기전 텍스트</p>
+                    <p class="t2">마우스 올렸을 때 텍스트</p>
+                </div>
+                <h1>큰타이틀 텍스트</h1>
+            </div>
+        </div>
+        <div class="item">
+            <img src="2.png">
+            <div class="text-box">
+                <div class="small-t">
+                    <p class="t1">마우스 올리기전 텍스트</p>
+                    <p class="t2">마우스 올렸을 때 텍스트</p>
+                </div>
+                <h1>큰타이틀 텍스트</h1>
+            </div>
+        </div>
+        <div class="item">
+            <img src="2.png">
+            <div class="text-box">
+                <div class="small-t">
+                    <p class="t1">마우스 올리기전 텍스트</p>
+                    <p class="t2">마우스 올렸을 때 텍스트</p>
+                </div>
+                <h1>큰타이틀 텍스트</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

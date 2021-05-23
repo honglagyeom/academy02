@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{}
+        .section1{
+            width: 100%;
+        }
+        .section1 img{
+            width: 100%;
+        }
+        @media (min-width:901px){
+            .section1 .event-d{display: block;}
+            .section1 .event-m{display: none;}
+        }
+        @media (max-width:900px){
+            .section1 .event-d{display: none !important;}
+            .section1 .event-m{display: block !important;}
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <section class="section section1">
+        <img src="web.jpg" class="event-d">
+        <img src="moblie.png" class="event-m">
+    </section>
+</body>
+</html>

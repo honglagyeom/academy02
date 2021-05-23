@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+
+        .section {
+            clear: both;
+            width: 80%;
+            margin: 150px auto;
+            border: 3px solid black;
+        }
+
+        .header {
+            margin-top: 0px;
+            background-color: #74d8ea;
+            width: 100%;
+            height: 120px;
+        }
+
+        section .container {
+            width: 100%;
+            clear: both;
+        }
+
+        .menu-bar {
+            width: 200px;
+            height: 200px;
+            background-color: #adadad;
+            float: left;
+        }
+
+        .menu-bar li {
+            padding: 10px;
+            line-height: 30px;
+            left: 30px;
+
+        }
+
+        .content {
+            background-color: forestgreen;
+            float: left;
+            box-sizing: border-box;
+            width: calc(100% - 200px);
+            height: 500px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 120px;
+            background-color: bisque;
+            clear: both;
+        }
+
+        /*        선생님*/
+        .section1 .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        .item {
+            float: left;
+            width: 25%;
+
+        }
+
+        .item .cont {
+            background: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  선생님이랑 -->
+    <section div class="section1">
+        <div class="container">
+            <div class="row">
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+                <div class="item">
+                    <div class="cont">내용</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--   내가 만들다 만 것...    -->
+    <div class="section">
+        <div class="header">이 부분은 웹 문서의 헤더 부분입니다.</div>
+        <div class="container">
+            <ul class="menu-bar">
+                <li>submenu</li>
+                <li>submenu</li>
+                <li>submenu</li>
+                <li>submenu</li>
+            </ul>
+            <div class="content">
+                <h2>여기는 문서의 제목입니다.</h2>
+            </div>
+        </div>
+        <div class="footer">여기는 footer입니다</div>
+    </div>
+</body></html>

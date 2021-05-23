@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        .back{
+            background: pink;
+            width: 1000px; height: 1000px; margin: 100px auto;}
+        .box1{width: 100px; height: 100px; background: red;
+/*            위치값을 사용할때는 꼭!!!!! position: 있어야만 위치이동가능*/
+            position: relative;
+            z-index:3;
+        }
+        .box2{width: 100px; height: 100px; background: gold;
+            position: relative;
+            z-index: 2;
+            top:-50px;
+            left: 20px;
+        }
+        .box3{width: 100px; height: 100px; background: green;
+            position: relative; top: -180px; left:50px;
+}
+    </style>
+</head>
+<body>
+    <div class="back">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        
+    </div>
+</body>
+</html>

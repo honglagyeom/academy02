@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        .wrap{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            border-radius: 5px;
+            transition: 0.3s;
+            display: block;
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            background: #dddddd;
+            text-indent: 35px;
+            font-size: 18px;
+            width: 300px;
+        }
+        .box::placeholder{color: #999999; font-size: 16px;}
+        .box:focus{
+            outline: none; 
+            border: tomato; 
+            box-shadow: 0 1px 5px rgba(200,100,100,0.8); 
+            background: white;
+            padding: 0 15px;
+            height: 40px;
+        }
+        .inpu-id{
+            background-image: url(Genesis/img/iccon.png);
+            background-repeat: no-repeat;
+            background-position: 10px 5px;
+        }
+        .btn{
+            width: 330px;
+            display: block;
+            background: orangered;
+            color: white;
+            border: none;
+            height: 40px;
+            border-radius: 5px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+<!--   form태그 중요해-->
+    <div class="wrap">
+       <form>
+            <input placeholder="아이디" class="box inpu-id" required>
+            <input type="password" placeholder="비밀번호" class="box" required>
+            <input type="checkbox" id="check" checked><label for="check">자동로그인</label> 
+<!--            label달아주면 글씨만 눌어도 check됨        -->
+<!--           checked쓴 건 처음부터 애초에 체크로 시작하는 것-->
+            <button type="submit" class="btn">로그인</button>
+       </form>
+    </div>
+</body>
+</html>

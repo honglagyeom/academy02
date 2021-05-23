@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; list-style: none; position: relative;}
+        .img-box{
+                position: absolute; top: 40px; left: 0;
+                display: flex; width: 100%;
+                justify-content: space-between; 
+                margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+  <div class="container">
+   <div class="box left-box">
+    <div class="button-box">
+        <button class="btn btn1">공지사항</button>
+        <button class="btn btn2">이벤트</button>
+    </div>
+    <ul class="list">
+        <li>[공지] CJ PNE 멤버십 서비스 정책 변경 안내<span>2020.01.29</span></li>
+        <li>[공지] CJ PNE 멤버십 서비스 정책 변경 안내<span>2020.01.29</span></li>
+        <li>[공지] CJ PNE 멤버십 서비스 정책 변경 안내<span>2020.01.29</span></li>
+        <li>[공지] CJ PNE 멤버십 서비스 정책 변경 안내<span>2020.01.29</span></li>
+    </ul>
+    <div class="img-box">
+        <img src="images/event1.jpg">
+        <img src="images/event2.jpg">
+        <img src="images/event3.jpg">
+    </div>
+   </div>
+   <div class="box right-box"><img src="images/banner.jpg"></div>
+  </div>
+  <div class="pop-up">
+       <h3>팝업창</h3>
+       <div class="box box1"></div>
+       <div class="box box2"></div>
+   </div>
+</body>
+</html>
+<!--
+        .container{
+            width: 1000px;
+            margin: 30px auto;
+            display: flex;
+        }
+        .box{width: 50%;}
+        .left-box{margin-right: 20px;}
+        .button-box{
+            margin: 0 auto;
+            display: flex;
+            width: 100%;
+            height: 40px;
+            background: #624646;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .btn{
+            width: 230px;
+            border: none;
+            height: 33px;
+        }
+        .btn1{margin-right: 5px; background: white; color: brown; font-weight: 900;}
+        .btn2{margin-left: 5px; background: #c39270;color: white; font-weight: 900;}
+        .list{margin: 30px auto; text-align: center; }
+        .list li{padding: 10px;}
+        .list span{margin-left:  70px;}
+        
+        .img-box{ position: absolute; top: 40px; left: 5px; display: none;}
+        .img-box img{padding-right: 10px;}    
+        .img-box img:last-child{padding-right: 0px;}  
+-->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js
+"></script>
+<script>    
+    $(".container").css("width","1000px")
+    $(".container").css("margin","30px auto")
+    $(".container").css("display","flex")
+    $(".box").css("width","50%")
+    $(".left-box").css("margin-right","20px")
+    $(".button-box").css("margin","0px auto")
+    $(".button-box").css("display","flex")
+    $(".button-box").css("width","100%")
+    $(".button-box").css("height","40px")
+    $(".button-box").css("background","#624646")
+    $(".button-box").css("justify-content","center")
+    $(".button-box").css("align-items","flex-end")
+    $(".btn").css("width","230px")
+    $(".btn").css("border","none")
+    $(".btn").css("height","33px")
+    $(".btn1").css("margin-right","5px")
+    $(".btn1").css("background","white")
+    $(".btn1").css("color","brown")
+    $(".btn1").css("font-weight","900")
+    $(".btn2").css("margin-right","5px")
+    $(".btn2").css("background","#c39270")
+    $(".btn2").css("color","white")
+    $(".btn2").css("font-weight","900")
+    $(".list").css("margin","30px auto")
+    $(".list").css("text-align","center")
+    $(".list li").css("padding","10px")
+    $(".list span").css("margin-left","70px")
+    
+    $(".btn1").click(function(){
+        $(".list").css("display","block")
+        $(".img-box").css("display","none")
+    })
+    $(".btn2").click(function(){
+        $(".list").css("display","none")
+        $(".img-box").css("display","flex")
+    })
+    $(".right-box img").click(function(){
+        
+    })
+</script>

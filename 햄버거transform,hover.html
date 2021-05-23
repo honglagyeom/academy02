@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+    }
+        .ham-btn{
+            width: 80px;
+            height: 80px;
+            border: 1px solid red;
+            margin: 30px auto;
+        }
+        .ham-btn .bar{
+            display: block;
+/*            인라인 속성을 블럭속성으로 바꿔줘야 크기 지정가능*/
+            width: 50px;
+            height: 6px;
+            background: tomato;
+            position: absolute;
+            left: calc(50% - 25px);
+/*  width의 반사이즈만큼 -줘야 중간으로 옮 공식처럼 외워야함*/
+            top: calc(50% - 3px);
+/* height의 반사이즈만큼 -줘야 중간으로 옮 공식처럼 외워야함*/ 
+            transition:0.5s;
+        }
+        .ham-btn .bar1{transform: translate(0,-15px);}
+        .ham-btn .bar2{transform: scaleX(1);}
+        .ham-btn .bar3{transform: translate(0,15px);}
+        
+        .ham-btn:hover .bar1{transform: rotate(45deg);}
+        .ham-btn:hover .bar2{transform: scaleX(0);}
+        .ham-btn:hover .bar3{transform: rotate(-45deg);}
+        
+    </style>
+<body>
+    <div class="ham-btn btn1">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+    </div>
+    </body>
+  </head>
+</html>

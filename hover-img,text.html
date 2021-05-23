@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            
+        }
+        .section1 .container{
+            max-width: 1350px;
+            width: calc(100% - 100px);
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 50px;
+        }
+        .section1 .item img{
+            display: block; 
+            width: 100%;
+            z-index: 10;
+            top:0;
+            transition: 1s;
+            /*transition 적용하려면 중간값이 필요해 hover top:-120px적용했으니까 기준값top:0;을 넣어줘야 적용이 됨*/
+        }
+        
+/*        900~450px 2칸*/
+        @media (max-width:900px) and (min-width:500px){
+            .section1 .container{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+/*
+        @media (max-width:449px){
+            .section1 container{
+                grid-template-columns: 1fr;
+            }
+        }
+*/
+        .section1 .container .item{
+            border: 1px solid black;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .section1 .item .text-box{
+            background: black;
+            color: white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+        }
+        .section1 .text-box *{
+            padding: 6px;
+            margin-top: 10px;
+            text-align: justify;
+            
+        }
+/*        item에 마우스를 올렸을 때 이미지가 top:-120px*/
+        .section1 .item:hover img{
+            top:-120px;
+            transition: 0.3s;
+        }
+        
+        .container1 {
+            background-color: dodgerblue;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container1 .circle-box{
+            border: 2px solid white;
+            width: 300px;
+            height: 70px;
+            border-radius: 50px;
+            background-color: darkturquoise;
+
+        }
+        .container1 .circle-box p{
+            position: absolute;
+            top: 20px;
+            left: 90px;
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            
+        }
+        .container1 .circle{
+            top:5px;
+            left: 0;
+            margin-left: 10px;
+            background-color: dodgerblue;
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content:center ;
+            transition: 1s;
+        }    
+        .container1 .circle p{
+            display: none;
+        }
+        .container1 .circle i{
+            font-size: 20px;
+            color: white;
+        }
+        .circle-box .unlock{
+            opacity: 0;
+            transition: 1s;
+        }
+        .circle-box .lock{
+        }
+        .container1 .circle-box:hover .unlock{
+            opacity: 1;
+            transition: 0.5s;
+        }
+        .container1 .circle-box:hover .lock{
+            opacity: 0;
+        }
+        .container1 .circle-box:hover .circle{
+            top:5px;
+            left:220px;
+            transition: 0.5s;
+        }
+        
+/*        선생님과 함께*/
+        .section2{
+            padding: 100px 0;
+            background: #fff3e6;
+            
+        }
+        .section2 .btn{
+            margin: 0 auto;
+            width: 300px;
+            height: 70px;
+            background: #c1a1d3;
+            border: 3px solid #1a508b;
+            border-radius: 38px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .section2 .btn .circle{
+            display: block;
+            width: 60px;
+            height: 60px;
+            background: #1a508b;
+            border-radius: 50%;
+            position: absolute;
+/*position: absolute; 사이즈 위치값 입력 필수*/
+            top:5px;
+            left: 5px;
+            color: #c1a1d3;
+            text-align: center;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 900;
+        }
+        .section2 .btn .text{
+            position: absolute;
+            top:24px;
+            left: 100px;
+            color: white;
+        }     
+        .section2 .btn span{
+            transition: 0.3s;
+        }
+        .section2 .btn .circle{
+            
+        }
+        .section2 .btn .text1{
+                opacity: 1;
+        }
+        .section2 .btn .text2{
+                opacity: 0;
+        }
+        /*마우스 올렸을 때*/
+        .section2 .btn:hover{background:purple}
+        .section2 .btn:hover .circle{background:#8b5ea5; left: 230px; }
+        .section2 .btn:hover .text1{left:70px; opacity: 0;}
+        .section2 .btn:hover .text2{left: 70px; opacity: 1;}
+        
+    
+    </style>
+</head>
+<body>
+<!-- 선생님이랑 같이 만들기-->
+       <section class="section2">
+           <div class="btn">
+               <span class="circle">→</span>
+               <span class="text text1">마우스를 올려주세요</span>
+               <span class="text text2">클릭해주세요</span>
+           </div>
+       </section>
+<!--    0121img-->
+           <div class="container1">
+            <div class="circle-box">
+                <div class="circle">
+                    <i class="fas fa-arrow-right"></i>
+                    <p>slide</p>
+                </div>
+                <p class="lock">slide to unlock</p>
+                <p class="unlock">unlocked!</p>
+            </div>
+        </div>
+    <section class="section1">
+        <div class="container">
+            <div class="item">
+                <img src="0121img/2.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="0121img/7.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="0121img/3.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="0121img/4.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="0121img/5.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="0121img/6.gif">
+                <div class="text-box">
+                    <h4>image title</h4>
+                    <p>Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. </p>
+                </div>
+            </div>                                                
+        </div>  
+        
+
+    </section>
+</body>
+</html>

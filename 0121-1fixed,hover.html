@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative;
+        font-family: 'Roboto', sans-serif; list-style: none;}
+        .contents{
+            border: 1px solid gray;
+            width: calc(100% - 60px);
+/*크게볼 때는 티가안나지만 크기를 줄였을 때 옆에 여백이 30px씩 있음*/
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contents p{
+            margin-top: 5px; margin-bottom: 10px;
+            text-align:justify;
+            line-height: 25px; font-size: 14px; color: #666666;}
+        .contents h1{
+            font-weight: 900;
+            margin-bottom: 30px; 
+            margin-top: 80px;}
+        header{
+            position: fixed; top: 0; left: 0;
+            /*스크롤내려도 화면위치 그대로 고정되있음*/
+/* position: fixed;하면 기본값 적용안되서 너비 높이 위치 다시 지정해야함*/
+            width: 100%; height: 60px;
+            z-index: 10;
+            background: royalblue;}
+        header .container{
+            border: 1px solid red;
+            width: calc(100% - 60px);
+/*크게볼 때는 티가안나지만 크기를 줄였을 때 옆에 여백이 30px씩 있음*/
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex; justify-content: space-between;
+        }
+        header .logo{
+            line-height: 60px; 
+            font-size: 30px; 
+            font-weight: 900; 
+            color: white;
+        }
+        header .menu{
+            display: flex;
+        }
+        header .menu li{
+            line-height: 60px;
+            color: white;
+            padding: 0 20px;
+        }
+        header .menu li:last-child{padding-right: 0;}
+        .top-box{
+            position: fixed;
+            width: 50px;
+            height: 50px;
+            bottom: 50px;
+            right: 50px;
+            z-index: 10;
+            background: skyblue; color: white;
+        }
+        
+        .main{
+            background-image: url(slider-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            width: 100%; height: 100vh;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .main .text-box{ 
+            background-color: rgba(0,0,0,0.5);
+            padding: 20px 30px;
+            text-align: center;
+            color: white;
+        }
+        .main .text-box h1{
+            text-transform: uppercase;
+            font-size: 70px;
+            
+        }
+        .main .text-box h4{}
+        .main .text-box button{
+            padding: 6px 30px;
+            background-color: pink;
+            color: white;
+            outline: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div class="top-box">TOP</div>
+    <header>
+        <div class="container">
+            <div class="logo">LOGO</div>
+            <ul class="menu">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </div>
+    </header>
+    <div class="contents">
+        <h1>'소울' 개봉 첫날 '원더우먼 1984' 오프닝 넘었다…'인사이드 아웃' 기록 깰까[공식]</h1>
+        <p>[OSEN=김보라 기자] 새해 극장가에 활력을 불어넣을 영화 '소울'이 개봉 첫날(20일) 박스오피스 1위에 등극하며 흥행 신드롬의 시작을 알렸다. 개봉 전 2주 연속 예매율 1위를 기록했기 때문.</p>
+
+        <p>현재 상영 중인 영화 '원더 우먼 1984'(감독 패티 젠킨스)의 오프닝 스코어를 뛰어 넘었고, '인사이드 아웃'(감독 피트 닥터, 2015)과 유사한 수치를 기록하며 디즈니·픽사의 흥행 신화를 이어갈 역작의 탄생을 알렸다.</p>
+        <p>애니메이션 '소울'(감독 피트 닥터, 수입배급 월트디즈니컴퍼니 코리아)은 예기치 못한 사고로 영혼이 된 조와 지구에 가고 싶지 않은 영혼 22가 함께 떠나는 특별한 모험을 그린 영화. 어제(20일) 개봉과 동시에 박스오피스 1위를 석권하며 흥행 질주의 서막을 열었다.</p>
+        <h1>1000여명 VFX 전문가 투입된 '승리호', 우주 비주얼 어떨까</h1>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <p>넷플릭스를 통해 공개되는 영화 '승리호'가 영화의 재미를 배가시키는 프로덕션 비하인드를 공개했다.</p>
+       <p>'승리호'는 2092년, 우주쓰레기 청소선 승리호의 선원들이 대량살상무기로 알려진 인간형 로봇 도로시를 발견한 후 위험한 거래에 뛰어드는 이야기를 담은 넷플릭스 영화다. 배우 송중기, 김태리, 진선규, 유해진이 주연을 맡았다. 1000여 명의 VFX 전문가들이 참여한 '승리호'는 지금껏 한국에서 본 적 없는 우주 비주얼을 화면에 가득 담아내며 새로운 세계를 완성해냈다.</p>
+        <h1>'소울' 개봉 첫날 '원더우먼 1984' 오프닝 넘었다…'인사이드 아웃' 기록 깰까[공식]</h1>
+        <p>[OSEN=김보라 기자] 새해 극장가에 활력을 불어넣을 영화 '소울'이 개봉 첫날(20일) 박스오피스 1위에 등극하며 흥행 신드롬의 시작을 알렸다. 개봉 전 2주 연속 예매율 1위를 기록했기 때문.</p>
+
+        <p>현재 상영 중인 영화 '원더 우먼 1984'(감독 패티 젠킨스)의 오프닝 스코어를 뛰어 넘었고, '인사이드 아웃'(감독 피트 닥터, 2015)과 유사한 수치를 기록하며 디즈니·픽사의 흥행 신화를 이어갈 역작의 탄생을 알렸다.</p>
+        <p>애니메이션 '소울'(감독 피트 닥터, 수입배급 월트디즈니컴퍼니 코리아)은 예기치 못한 사고로 영혼이 된 조와 지구에 가고 싶지 않은 영혼 22가 함께 떠나는 특별한 모험을 그린 영화. 어제(20일) 개봉과 동시에 박스오피스 1위를 석권하며 흥행 질주의 서막을 열었다.</p>
+        <h1>'소울' 개봉 첫날 '원더우먼 1984' 오프닝 넘었다…'인사이드 아웃' 기록 깰까[공식]</h1>
+        <p>[OSEN=김보라 기자] 새해 극장가에 활력을 불어넣을 영화 '소울'이 개봉 첫날(20일) 박스오피스 1위에 등극하며 흥행 신드롬의 시작을 알렸다. 개봉 전 2주 연속 예매율 1위를 기록했기 때문.</p>
+
+        <p>현재 상영 중인 영화 '원더 우먼 1984'(감독 패티 젠킨스)의 오프닝 스코어를 뛰어 넘었고, '인사이드 아웃'(감독 피트 닥터, 2015)과 유사한 수치를 기록하며 디즈니·픽사의 흥행 신화를 이어갈 역작의 탄생을 알렸다.</p>
+        <p>애니메이션 '소울'(감독 피트 닥터, 수입배급 월트디즈니컴퍼니 코리아)은 예기치 못한 사고로 영혼이 된 조와 지구에 가고 싶지 않은 영혼 22가 함께 떠나는 특별한 모험을 그린 영화. 어제(20일) 개봉과 동시에 박스오피스 1위를 석권하며 흥행 질주의 서막을 열었다.</p>
+    </div>
+    
+    <section class="main">
+        <div class="text-box">
+            <h1>main text</h1>
+            <h4>sub text</h4>
+            <button> 바로가기 </button>
+        </div>
+    </section>
+</body>
+</html>

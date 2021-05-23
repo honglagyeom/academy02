@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; list-style: none; position: relative;}
+        a{text-decoration: none;}
+        
+        .section{width: 1000px; margin: 30px auto; display: flex;}
+        .section>div{width: 50%; border: 1px solid black;}
+        .btn-group{width: 100%; height: 50px; background: sienna; display: flex;}
+        .btn-group>div{width: 230px; margin-left: 10px; text-align: center; margin-top: 10px; line-height: 40px;}
+        .btn1{background: white; color: sienna;}
+        .btn2{background: coral; color: white;}
+        .content-group{
+/*            border: 1px solid red;*/
+            width: 100%; height: 200px;
+        }
+        .content-group>div{position: absolute; top: 0; left: 0; width: 100%;}
+        .cont1{}
+        .cont1 li{display: flex; justify-content: space-between; line-height: 50px;}
+        .cont2{
+            display: none;
+            justify-content: space-between; margin-top: 10px;}
+        .left{margin-right: 20px;}
+        .popup{
+            position: fixed;
+            top: 0;
+            left: 0; 
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+            display: none;
+        }
+        .popup .black{ 
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+        }
+        .popup .pop{
+            width: 300px; height: 200px; background: white;
+            margin: 0 auto;
+            top: calc(50% - 100px); /*부모의 높이 중간위치*/
+        }
+        .popup .pop input{display: block; width: 200px; margin: 10px auto;} 
+        /*인라인속성은 블록속성으로 바꿔줘야 너비높이 설정가능*/
+        .popup .pop button{display: block; width: 200px; margin: 10px auto;}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <ul class="main-menu">
+            <li class="menu-li">
+               <a href="#">MENU1</a>
+               <ul class="sub-menu">
+                   <li class="sub-li"><a href="#">submenu1-1</a></li>
+                   <li class="sub-li"><a href="#">submenu1-2</a></li>
+                   <li class="sub-li"><a href="#">submenu1-3</a></li>
+                   <li class="sub-li"><a href="#">submenu1-4</a></li>
+               </ul> 
+            </li>
+            <li class="menu-li">
+                <a href="#">MENU2</a>
+                <ul class="sub-menu">
+                    <li class="sub-li"><a href="#">submenu2-1</a></li>       
+                    <li class="sub-li"><a href="#">submenu2-2</a></li>       
+                    <li class="sub-li"><a href="#">submenu2-3</a></li>       
+                    <li class="sub-li"><a href="#">submenu2-4</a></li>       
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="#">MENU3</a>
+                <ul class="sub-menu">
+                    <li class="sub-li"><a href="#">submenu3-1</a></li>
+                    <li class="sub-li"><a href="#">submenu3-2</a></li>
+                    <li class="sub-li"><a href="#">submenu3-3</a></li>
+                    <li class="sub-li"><a href="#">submenu3-4</a></li>
+                </ul>
+            </li>
+            <li class="menu-li">
+                <a href="#">MENU4</a>
+                <ul class="sub-menu">
+                    <li class="sub-li"><a href="#">submenu4-1</a></li>
+                    <li class="sub-li"><a href="#">submenu4-2</a></li>
+                    <li class="sub-li"><a href="#">submenu4-3</a></li>
+                    <li class="sub-li"><a href="#">submenu4-4</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    
+<!--    section2-->
+    <section class="section section2">
+        <div class="left">
+            <div class="btn-group">
+                <div class="btn1">공지사항</div>
+                <div class="btn2">이벤트</div>
+            </div>
+            <div class="content-group">
+                <div class="cont1">
+                    <ul>
+                        <li><span>[공지] CJ PNE 멤버십 서비스 정책 변경 안내</span><span>2020.01.29</span></li>
+                        <li><span>[공지] CJ PNE 멤버십 서비스 정책 변경 안내</span><span>2020.01.29</span></li>
+                        <li><span>[공지] CJ PNE 멤버십 서비스 정책 변경 안내</span><span>2020.01.29</span></li>
+                        <li><span>[공지] CJ PNE 멤버십 서비스 정책 변경 안내</span><span>2020.01.29</span></li>
+                    </ul>
+                </div>
+                <div class="cont2">
+                    <img src="images/event1.jpg">
+                    <img src="images/event2.jpg">
+                    <img src="images/event3.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <img src="images/banner.jpg"  class="right-btn">
+        </div>
+    </section>
+    <div class="popup">
+        <div class="black"></div>
+        <div class="pop">
+            <input type="text" placeholder="아이디를 입력하세요">
+            <input type="password" placeholder="비밀번호를 입력하세요">
+            <button type="submit">로그인</button>
+            <button class="btn-close">닫기</button>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js
+"></script>
+<script>
+  $(".btn1").click(function(){
+      $(".btn1").css("color","sienna")
+      $(".btn1").css("background","white")
+      $(".btn2").css("background","coral")
+      $(".btn2").css("color","white")
+      $(".cont1").css("display","block")
+      $(".cont2").css("display","none")
+  })
+ $(".btn2").click(function(){
+      $(".btn1").css("background","coral")
+      $(".btn1").css("color","white")
+      $(".btn2").css("color","sienna")
+      $(".btn2").css("background","white")
+      $(".cont1").css("display","none")
+      $(".cont2").css("display","flex")
+  })
+    
+$(".right-btn").click(function(){
+    $(".popup").css("display","block")
+})
+$(".btn-close").click(function(){
+    $(".popup").css("display","none")
+})
+</script>

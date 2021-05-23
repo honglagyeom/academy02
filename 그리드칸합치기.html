@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        .header{display: flex; margin: 10px;}
+        .box1{
+            background: skyblue;
+            width: 150px; 
+            height: 150px; 
+            margin-right: 10px; }
+        .box2{
+            background-color: orange; 
+            width: 150px; 
+            height: 150px; 
+            margin-right: 10px;}
+        .box3{
+            background-color: chartreuse; 
+            width: 150px; 
+            height: 150px;}
+        .body{
+            margin: 10px; 
+            display: flex;}
+        .left .window1{
+            background-color: blue; 
+            width: 310px; height: 150px; 
+            margin-right: 10px;}
+        .window2{
+            display: flex; margin-top: 10px;}
+        .window2 .small1{background-color: cadetblue; width: 150px; height: 150px; margin-right: 10px;}
+        .window2 .small2{background-color:burlywood; width: 150px; height: 150px;}
+        .right{background-color: gray; width: 150px; height: 310px;}
+    </style>
+<!--    margin left top right 등 따로 지정해서 주기-->
+</head>
+<body>
+    <div class="header">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="body">
+        <div class="left">
+            <div class="window1"></div>
+            <div class="window2">
+                <div class="small1"></div>
+                <div class="small2"></div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

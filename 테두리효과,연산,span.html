@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative;font-family: 'Noto Sans KR', sans-serif;}
+        h1{background: black; color: white; text-align: center;
+        padding: 20px 0; font-weight: 100;}
+        h1 span{color: yellow; font-weight: 900; letter-spacing: 10px;}
+            /*span 태그는 "인라인 속성: 줄변경x, 사이즈 지정할 수x" */
+        .title{padding-top: 50px; font-size: 25px; color: #999999;
+        text-align: center;}
+        .title .line{
+            display: inline-block; top:-5px; margin: 0 20px;
+            width: 100px; height: 1px; background: gold;}
+        .section1{
+            width: 100%; 
+            height: calc(100vh - 200px);
+/*          연산 - 앞뒤로 빈칸이 있어야 적용됨 : 길이도 연산이 가능*/
+            background: cornflowerblue;}
+        .section2{
+/*            max-width: 1400px;*/
+            width:calc(100% - 60px);
+/*            양옆에 30px씩 띄어있게하고싶어 calc연산쓰기*/
+            border: 1px solid black;
+            margin: 20px auto;
+            display: flex;
+        }    
+        .section2 .item{
+            flex:1; 
+            border: 1px solid red;
+            margin-right: 30px;}
+        .section2 .item:last-child{margin-right: 0;}
+        
+        /*
+        .section2 .item1{margin-right: 30px;}
+        .section2 .item2{margin-right: 30px;}
+        .section2 .item3{margin-right: 0px;}
+        */
+        .section2 .item img{width: 100%; /*부모사이즈에서 100%*/
+        display: block;}
+        .section2 .item .item-inner{
+            display: flex; align-items: center; justify-content: center; /*position:absolute; 강제 위치 적용된 애들 제외하고 나머지한테 적용 so text-box만 적용됨*/
+            position: absolute; 
+            /*너비 높이 기본값이 사라지는 것 so너비 높이 다시 지정해줘야해*/ 
+            top:0; left: 0;
+            /*이미지와 텍스트 박스 겹치기 위치지정해서 조정하면돼*/
+            width: 100%; height: 100%;
+        }
+        .section2 .item .item-inner .bg{
+            position: absolute; top: 0; left: 0; 
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+        }
+        .section2 .item .item-inner .bg-line{
+            border: 1px solid white;
+            box-sizing: border-box; 
+            /*너비 높이값에 border,padding포함시켜주는 css속성! padding-box도 있어*/
+            position: absolute; top:20px;left:20px;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+        }
+        .section2 .item .item-inner .text-box{
+            border: 1px solid red;
+        }
+        .section2 .item .item-inner .text-box h3{color: white;}
+        .section2 .item .item-inner .text-box .icon-box{text-align: center; color: black;}
+        .section2 .item .item-inner .text-box .icon-box i{
+            display: inline-block;
+            width: 30px; height: 30px; 
+            background: white;
+            border-radius: 50%; margin: 3px;
+            line-height: 30px;
+        }
+        
+/*        /혼자/*/
+        .section2 .item .item-inner1{
+            border: 1px solid red;
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%; 
+            display: flex; justify-content: center; align-items: center;
+        }
+        .section2 .item .item-inner1 .bg1{
+            width: 100%; height: 100%;
+            position: absolute; top: 0; left: 0;
+            background: rgba(0,0,0,0.8);
+        }
+        .section2 .item .item-inner1 .bg1-line{
+            width: calc(100% - 40px); height: calc(100% - 40px);
+            margin: 20px;
+            position: absolute; left: 0; top: 0;
+            border: 1px solid white;
+        }
+        .section2 .item .item-inner1 .text-box1{
+            border: 1px solid red;
+        }
+        .section2 .item .item-inner1 .text-box1 h3{
+            color: white;
+        }
+        .section2 .item .item-inner1 .text-box1 .icon-box1{
+           text-align: center;
+        }
+        .section2 .item .item-inner1 .text-box1 .icon-box1 i{
+            display: inline-block;
+            color: black; background: white; border-radius: 50%;
+            line-height: 30px;
+            width: 30px; height: 30px; 
+            /*인라인-블럭으로 속성바꿧으니까 사이즈 적용가능*/
+            margin: 3px;
+        }
+/*        seciton3*/
+        .section3{
+            width: 100%; height: 350px;
+            background: pink;
+            display: flex; justify-content: center; align-items: center;
+        }
+        .section3 .box-line{
+            width: calc(100% - 60px); 
+            height: calc(100% - 60px);
+            border: 1px solid white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>길이에 <span>사측연산</span> 사용하기</h1>
+    <div class="title">
+        <span class="line"></span>css에서 사측연산을 사용하기<span class="line"></span>
+    <!-- span태그로 메뉴바 짝대기아이콘모양 만들 수있음-->
+    </div>
+    <section class="section section3">
+        <div class="box-line">등등등</div>    
+    </section>
+    
+<section class="section section2">
+    <div class="item item1">
+        <img src="overflow.png">
+        <div class="item-inner">
+            <div class="bg"></div>
+            <div class="bg-line"></div>
+            <div class="text-box">
+                <h3>product name</h3>
+                <div class="icon-box">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-heart"></i>
+                   <i class="fas fa-shopping-cart"></i> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item item2">
+        <img src="overflow.png">
+        <div class="item-inner">
+            <div class="bg"></div>
+            <div class="bg-line"></div>
+            <div class="text-box">
+                <h3>product name</h3>
+                <div class="icon-box">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-heart"></i>
+                   <i class="fas fa-shopping-cart"></i> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="item item3">
+        <img src="overflow.png">
+        <div class="item-inner1">
+            <div class="bg1"></div>    
+            <div class="bg1-line"></div>    
+            <div class="text-box1">
+                <h3>product name</h3>
+                <div class="icon-box1">
+                   <i class="fas fa-star"></i>
+                   <i class="fas fa-heart"></i>
+                   <i class="fas fa-shopping-cart"></i>             
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="section section1"></section>
+</body>
+</html>

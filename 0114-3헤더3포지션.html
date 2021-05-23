@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <style>
+            *{margin: 0; padding: 0; position: relative; list-style: none;}
+            header{border: 10px solid red;}
+            header .menu-group{height: 60px; width: 100%; 
+            display: flex; align-items: center; justify-content: center;
+/*display: flex; align-items: center; justify-content: center;하니까 width알아서 좁아져*/
+            }
+            header .menu{
+                border: 2px solid blue; 
+                display: flex;
+               }
+            header .menu-li{padding: 30px;/*메뉴잘눌릴수있게빵빵하게채워주자*/}
+            header .menu-icon{
+                border: 5px solid green; 
+                position: absolute;
+                top:30px; left: 10px;
+                display: none;
+            }
+            @media (max-width:900px){
+                header .menu-icon{display: block;} /*블록속성이니까*/
+                header .menu{display: none !important;}
+            }   /*그냥해보고 적용이 안될경우 !important붙여주기*/
+                
+            header .icon-group{
+                position: absolute;
+                top:30px; right: 10px;
+                border: 2px solid magenta;}
+
+            
+            
+        </style>
+</head>
+<body>
+    <header>
+        <div class="menu-group">
+            <ul class="menu">
+                <li class="menu-li">HOME</li>
+                <li class="menu-li">ABOUT US</li>
+                <li class="menu-li">GIFT</li>
+                <li class="menu-li">CONTACT</li>
+            </ul>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+<!--                메뉴아이콘 작아지면 보이게 할 것임-->
+            </div>
+            <div class="icon-group">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-bag"></i>
+                <i class="fas fa-cog"></i>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

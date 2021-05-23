@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            position: relative;
+        }
+        .container{
+            border: 1px solid black;
+            width: 400px;
+            height: 500px;
+            background-image: url(2.png);
+            background-repeat: no-repeat;
+            color: white;
+            cursor: pointer;
+        }
+            
+        .container .title{
+            position: absolute;
+            top: 240px;
+            left: 30px;
+        }
+        .container .text{
+            font-size: 20px;
+            position: absolute;
+            top: 220px;
+            left: 30px;
+        }
+        .container .text1{
+            opacity: 1;
+            transition: 1s;
+        }
+        .container .text2{
+            opacity: 0;
+            transition: 1s;
+        }
+/*        hover*/
+        .container:hover .text1{
+            opacity: 0;
+            top: 235px;
+        }
+        .container:hover .text2{
+            opacity: 1;
+            top: 210px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+<!--        <img src="2.png">-->
+        <div class="text text1">WHERE THERE IS LOVE</div>
+        <div class="text text2">IN TEACHING OTHERS</div>
+        <h1 class="title">INGREDIA NUTRISHA</h1>
+    </div>
+</body>
+</html>

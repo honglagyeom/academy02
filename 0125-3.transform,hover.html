@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            position: relative;
+            margin: 0;
+            
+        }
+        section{
+            border: 1px solid black;
+            width: calc(100% - 100px);
+            margin: 50px auto;
+        }
+        section h1{
+            background: white;
+            margin: 0 auto;
+            top: -25px;
+            width: 270px;
+            line-height: 50px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        section .container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            padding-bottom: 100px;
+            padding-top: 50px;
+        }
+        section .item{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black; 
+            background: gold;
+        }
+        section .item1{
+            transform: translate(-50px,100px) rotate(30deg);
+/*            속성 띄어쓰기로 계속 다른 트랜스폼 속성 중복 적용가능 */
+        }
+        section .item2{transform: rotate(45deg);}
+        section .item3{transform: scale(1.8);}
+        section .item4{
+            transform: skewX(-30deg);
+        }
+        
+/*        응용연습  hover와 transform사용해서 zoom in 효과주기  */
+
+/*            <div class="container2">
+                <div class="item">
+                    <img src="jc.jpg">
+                </div>
+              </div>      */
+        .container2 .item{
+            border: 5px solid black;
+            width: 400px;
+            height: 250px;
+            overflow: hidden; 
+            
+        }
+        .container2 .item img{
+            width: 100%;
+            height: 100%;
+        }
+        .container2 .item:hover img{
+            transform: scale(1.3);
+        }
+        
+    </style>
+</head>
+<body>
+    <section>
+        <h1>transform 사용하기</h1>
+        <div class="container">
+            <div class="item item1">이동</div>
+            <div class="item item2">회전</div>
+            <div class="item item3">크기</div>
+            <div class="item item4">기울기</div>
+        </div>
+    </section>
+<!--    응용연습-->
+    <div class="container2">
+        <div class="item">
+            <img src="jc.jpg">
+        </div>
+    </div>
+</body>
+</html>

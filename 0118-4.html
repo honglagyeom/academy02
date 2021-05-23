@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative;}
+        div{border: 5px solid black;}
+        .box1{
+            /*기본너비값:100%*/
+            width: 50%;
+            /*
+            사이즈에 작성할 수 있는 단위
+            %: 부모사이즈를 기준으로 설정.
+            px: 절대 사이즈(부모사이즈와 상관없는 고정사이즈)
+            vw: divice width(기기의 너비를 기준으로 한 비율) 100vw
+            vh: divice height(기기의 높이를 기준으로한 비율) 100vh
+            */
+        }
+        .box1-child{
+            border-color: red;
+            /*정사각형: 높이사이즈=너비사이즈*/
+            width: 50vw; 
+            height: 50vw;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">박스사이즈
+        <div class="box1-child">박스의 자식</div>
+    </div>
+</body>
+</html>

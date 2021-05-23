@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative;}
+        .box1{width: 200px; height: 200px; 
+        background-image: linear-gradient(#6930c3 25%, #64dfdf 25%, #64dfdf 50%, #6930c3 50%, #6930c3 75%, #64dfdf 75%);
+        background-size: 40px 40px; /*이사이즈로 repeat되는상태*/
+/*        background-repeat: repeat-x; x축만 반복*/
+        }
+        .box2{width: 500px; height: 400px; 
+        background-image: linear-gradient(45deg, #21209c 25%, #fdb827 25%, #fdb827 50%, #21209c 50%, #21209c 75%, #fdb827 75%);
+        background-size: 100px 100px;
+        }
+        .box3{
+            border: 10px solid black;
+            width: 500px; height: 500px;
+            background-image: linear-gradient(45deg, #41584b 25%, transparent 25%, transparent 75%, #41584b 75%),
+         linear-gradient(135deg, #41584b 25%, transparent 25%, transparent 75%, #41584b 75%);
+            background-size: 50px 50px;
+        }
+             /*transparent    또는    rgba(255,255,255,0)>투명하게*/
+        .box4{
+            border: 10px solid black;
+            width: 500px; height: 500px;
+            background-image: linear-gradient(135deg, navy 25%, transparent 25%),linear-gradient(225deg, navy 25%, transparent 25%);
+            background-size: 50px 50px;
+        }
+        
+    </style>
+    
+    
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

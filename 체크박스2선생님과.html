@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0; position: relative;}
+        .label1{
+            display: block;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            background: #d0d0d0;
+            box-shadow: 0 1px 5px gray;
+            transition: 0.3s;
+        }
+        .label1 .circle{ 
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 1px 5px #c1c1c1;
+            left: 0;
+            transition: 0.3s;
+        }
+        .btn{display: none;}
+        
+        .btn:checked + label{} /*같은레벨에서 바로 뒤에있는 한 태그만 선택할 때 + */
+        .btn:checked ~ .label1{background: pink;} /*같은레벨 동생들 여러명 중 선택*/
+        .btn:checked ~ .label1 .circle{background: #9b4655; left: 30px;}
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="btn1" class="btn">
+    <label for="btn1" class="label1">
+        <span class="circle"></span>
+    </label>
+</body>
+</html>

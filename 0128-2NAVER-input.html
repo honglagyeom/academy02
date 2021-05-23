@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
+        }
+        body{background: #cbcbcb;}
+        .logo{
+            text-align: center;
+            font-size: 45px;
+            color: green;
+            font-weight: 900;
+        }
+        .container{
+            max-width: 500px;
+            width: calc(100% - 60px);
+            margin: 0 auto;
+        }
+        .input-box{
+            width: 100%;
+            border: 1px solid #9f9f9f;
+            padding: 10px 15px;
+            box-sizing: border-box;
+/*            패딩이 높이 너비포함 사이즈되게*/
+            display: flex;
+            justify-content: space-between;
+            background: white;
+        }
+        .input-box input{
+            width: 70%;
+            border: none;
+            background: transparent;
+/*            투명한색*/
+            color: tomato;
+        }
+        .input-box input:focus{outline: none;}
+        /*포커스(커서깜박일때) 검정색 박스 안뜸*/
+        .input-box input::placeholder{ color: pink;}
+        .input-box input:focus::placeholder{ color: transparent;}
+        /*커서깜박일 때 글자 컬러를 투명하게 만들어서 사라진 것처럼 보이게 만들어줌 */
+        .container2{
+            display: flex;
+            width: 100%;
+            justify-content:space-around;
+        }
+         .box{
+             padding: 10px 15px;
+             background: white;
+             flex: 1;
+            
+        }
+        .box input{border: none;}
+        
+        .wrap{display: flex;}
+        .wrap>div{margin-right: 10px;}
+        .wrap>div:last-child{margin-right: 0;}
+        .wrap select{border: none; outline: none; width: 100%;}
+        
+    </style>
+</head>
+<body>
+    <h1 class="logo">NAVER</h1>
+    <form>
+        <div class="container">
+            <h3>아이디</h3>
+            <div class="input-box input-box1">
+                <input type="text" placeholder="아이디"><span>@naver.com</span>
+            </div>
+            <h3>비밀번호</h3>
+            <div class="input-box input-box2">
+                <input type="password"><span>잠금아이콘</span>  
+            </div>
+            <h3>비밀번호 확인</h3>
+            <div class="input-box input-box3">
+                <input type="password"><span>잠금아이콘</span>  
+            </div>
+            <h3>이름</h3>
+            <div class="input-box input-box4">
+                <input type="text">  
+            </div>
+            <h3>생년월일</h3>
+              <div class="wrap">
+               <div class="input-box">
+                    <input type="text" placeholder="년(4자)">
+                </div>
+                <div class="input-box">
+                    <select>
+                        <option>월</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="일">
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
